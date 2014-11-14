@@ -1,8 +1,7 @@
 Scratch
 =======
-
-
 `2014-11-14 Fedora 21 : Customising the search path with NetworkManager`_.
+
 `2014-11-14 : reStructuredText : rst : Implicit Hyperlink Targets`_.
 
 2014-11-14 : reStructuredText : rst : Implicit Hyperlink Targets
