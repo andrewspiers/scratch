@@ -1,9 +1,10 @@
 Scratch
 =======
-`Fedora 21 : Customising the search path with NetworkManager`_.
+`Fedora 21 : Customising the search path with NetworkManager`_
 
-`reStructuredText : rst : Implicit Hyperlink Targets`_.
-`Tmux copy and paste using vi mode`_.
+`reStructuredText : rst : Implicit Hyperlink Targets`_
+
+`Tmux copy and paste using vi mode`_
 
 
 
