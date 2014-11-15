@@ -1,12 +1,12 @@
 Scratch
 =======
+`Docker operations`_
+
 `Fedora 21 : Customising the search path with NetworkManager`_
 
 `reStructuredText : rst : Implicit Hyperlink Targets`_
 
 `Tmux copy and paste using vi mode`_
-
-`Docker operations`_
 
 
 Docker operations
