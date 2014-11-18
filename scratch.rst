@@ -8,6 +8,7 @@ Scratch
 
 `Tmux copy and paste using vi mode`_
 
+`Clearing the screen in bash vi mode`_
 
 Docker operations
 =================
