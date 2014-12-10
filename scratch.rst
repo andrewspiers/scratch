@@ -16,6 +16,8 @@ Vim multiwindow
 ===============
 2014-12-10
 
+multiwindow commands::
+
   :split filename  - split window and load another file
   ctrl-w up arrow  - move cursor up a window
   ctrl-w ctrl-w    - move cursor to another window (cycle)
