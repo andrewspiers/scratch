@@ -12,6 +12,17 @@ Scratch
 
 `Clearing the screen in bash vi mode`_
 
+
+Puppetdb curl test
+==================
+
+::
+
+    curl -G 'http://puppetdb.example.com:8080/v4/resources' --data-urlencode  'query= ["or", ["=", environment", "nectar"], ["=", "environment", "melbourne"] ] '
+
+
+
+
 Vim multiwindow
 ===============
 2014-12-10
