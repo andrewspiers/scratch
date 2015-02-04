@@ -18,7 +18,7 @@ Puppetdb curl test
 
 ::
 
-    curl -G 'http://puppetdb.example.com:8080/v4/resources' --data-urlencode  'query= ["or", ["=", environment", "nectar"], ["=", "environment", "melbourne"] ] '
+    curl -G 'http://puppetdb.example.com:8080/v4/resources' --data-urlencode  'query= ["or", ["=", environment", "env1"], ["=", "environment", "env2"] ] '
 
 
 
