@@ -12,6 +12,8 @@ Scratch
 
 `Clearing the screen in bash vi mode`_
 
+`Stardict`_ (dictionary for freebsd)
+
 
 Puppetdb curl test
 ==================
@@ -97,3 +99,25 @@ bind can also be used to bind Ctrl-L to clear-screen, just like in emacs mode::
 
 You need to literally input a Ctrl-L on your keyboard, you cannot type a '^'
 and then a 'L'.
+
+
+Stardict
+========
+(Just some notes here about what else needs to be done.)
+::
+
+    Message for sdcv-0.4.2_2:
+    **************************************************************************
+    sdcv is now installed.
+    you have to fetch the dictionaries to make it work correctly.
+
+    1. Make directory for dictionaries files :
+
+            # mkdir -p /usr/local/share/stardict/dict
+
+
+    2. Please put your dictionary file at :
+
+            /usr/local/share/stardict/dict/
+
+    **************************************************************************
