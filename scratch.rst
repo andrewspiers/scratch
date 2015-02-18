@@ -121,3 +121,8 @@ Stardict
             /usr/local/share/stardict/dict/
 
     **************************************************************************
+
+Options
+=======
+maraschino
+sickrage
