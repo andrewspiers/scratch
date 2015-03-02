@@ -51,6 +51,20 @@ Docker operations
 https://www.youtube.com/watch?v=T7Y669CTuXE#t=23
 
 
+Selinux list port mappings / bindings
+=====================================
+2015-03-02
+
+`semanage port -l`
+
+
+
+reStructuredText : rst : Implicit Hyperlink Targets
+===================================================
+2014-11-14
+
+Ref: http://docutils.sourceforge.net/docs/user/rst/quickref.html#implicit-hyperlink-targets
+
 
 Tmux copy and paste using vi mode
 =================================
@@ -58,12 +72,6 @@ Tmux copy and paste using vi mode
 
 Go to this website and do what it says:
 http://blog.sanctum.geek.nz/vi-mode-in-tmux/
-
-reStructuredText : rst : Implicit Hyperlink Targets
-===================================================
-2014-11-14
-
-Ref: http://docutils.sourceforge.net/docs/user/rst/quickref.html#implicit-hyperlink-targets
 
 
 Fedora 21 : Customising the search path with NetworkManager
