@@ -28,7 +28,7 @@ Puppet srv records
 
 ::
 
-     dig _x-puppet._tcp.rc.nectar.org.au SRV
+     dig _x-puppet._tcp.rc.example.com SRV
 
 
 Vim multiwindow
