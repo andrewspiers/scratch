@@ -23,6 +23,12 @@ Puppetdb curl test
     curl -G 'http://puppetdb.example.com:8080/v4/resources' --data-urlencode  'query= ["or", ["=", "environment", "env1"], ["=", "environment", "env2"] ] '
 
 
+Puppet srv records
+==================
+
+::
+
+     dig _x-puppet._tcp.rc.nectar.org.au SRV
 
 
 Vim multiwindow
