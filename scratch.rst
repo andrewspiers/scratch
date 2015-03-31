@@ -1,6 +1,5 @@
 Scratch
 =======
-`Vim multiwindow`_
 
 `Docker operations`_
 
@@ -14,6 +13,9 @@ Scratch
 
 `Stardict`_ (dictionary for freebsd)
 
+`Vim multiwindow`_
+
+`Vim folding`_
 
 Puppetdb curl test
 ==================
@@ -31,24 +33,6 @@ Puppet srv records
      dig _x-puppet._tcp.rc.example.com SRV
 
 
-Vim multiwindow
-===============
-2014-12-10
-
-multiwindow commands::
-
-  :split filename  - split window and load another file
-  ctrl-w up arrow  - move cursor up a window
-  ctrl-w ctrl-w    - move cursor to another window (cycle)
-  ctrl-w_          - maximize current window
-  ctrl-w=          - make all equal size
-  10 ctrl-w+       - increase window size by 10 lines
-  :vsplit file     - vertical split
-  :sview file      - same as split, but readonly
-  :hide            - close current window
-  :only            - keep only this window open
-  :ls              - show current buffers
-  :b 2             - open buffer #2 in this window
 
 Docker operations
 =================
@@ -140,3 +124,43 @@ Options
 =======
 maraschino
 sickrage
+
+
+Vim multiwindow
+===============
+2014-12-10
+
+multiwindow commands::
+
+  :split filename  - split window and load another file
+  ctrl-w up arrow  - move cursor up a window
+  ctrl-w ctrl-w    - move cursor to another window (cycle)
+  ctrl-w_          - maximize current window
+  ctrl-w=          - make all equal size
+  10 ctrl-w+       - increase window size by 10 lines
+  :vsplit file     - vertical split
+  :sview file      - same as split, but readonly
+  :hide            - close current window
+  :only            - keep only this window open
+  :ls              - show current buffers
+  :b 2             - open buffer #2 in this window
+
+
+Vim folding
+===========
+Vim folding commands::
+
+    zf#j creates a fold from the cursor down # lines.
+    zf/string creates a fold from the cursor to string .
+    zj moves the cursor to the next fold.
+    zk moves the cursor to the previous fold.
+    zo opens a fold at the cursor.
+    zO opens all folds at the cursor.
+    zm increases the foldlevel by one.
+    zM closes all open folds.
+    zr decreases the foldlevel by one.
+    zR decreases the foldlevel to zero -- all folds will be open.
+    zd deletes the fold at the cursor.
+    zE deletes all folds.
+    [z move to start of open fold.
+    ]z move to end of open fold.
