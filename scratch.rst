@@ -1,8 +1,6 @@
 Scratch
 =======
 
-`Docker operations`_
-
 `Fedora 21 : Customising the search path with NetworkManager`_
 
 `reStructuredText : rst : Implicit Hyperlink Targets`_
@@ -32,13 +30,6 @@ Puppet srv records
 
      dig _x-puppet._tcp.rc.example.com SRV
 
-
-
-Docker operations
-=================
-2014-11-15
-
-https://www.youtube.com/watch?v=T7Y669CTuXE#t=23
 
 
 Selinux list port mappings / bindings
