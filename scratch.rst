@@ -43,6 +43,10 @@ and then a 'L'.
 
 
 
+Perl
+====
+http://www.perl.org/books/beginning-perl/
+
 Puppetdb curl test
 ==================
 
