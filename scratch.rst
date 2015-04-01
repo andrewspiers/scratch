@@ -1,13 +1,13 @@
 Scratch
 =======
 
+`Clearing the screen in bash vi mode`_
+
 `Fedora 21 : Customising the search path with NetworkManager`_
 
 `reStructuredText : rst : Implicit Hyperlink Targets`_
 
 `Tmux copy and paste using vi mode`_
-
-`Clearing the screen in bash vi mode`_
 
 `Stardict`_ (dictionary for freebsd)
 
