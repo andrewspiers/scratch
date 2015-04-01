@@ -42,6 +42,13 @@ You need to literally input a Ctrl-L on your keyboard, you cannot type a '^'
 and then a 'L'.
 
 
+Irssi Scripting
+===============
+
+http://juerd.nl/site.plp/irssiscripttut
+
+http://www.irssi.org/documentation/perl
+
 
 Perl
 ====
