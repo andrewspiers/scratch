@@ -16,6 +16,13 @@ Scratch
 `Vim folding`_
 
 
+Beer
+====
+
+Panhead American Pale Ale at some place
+in Moonee Ponds. 8.
+
+
 Clearing the screen in bash vi mode
 ===================================
 2014-07-04
