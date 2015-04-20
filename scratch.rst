@@ -3,6 +3,8 @@ Scratch
 
 `Clearing the screen in bash vi mode`_
 
+`Emoji and Symbol fonts for Fedora`_
+
 `Fedora 21 : Customising the search path with NetworkManager`_
 
 `reStructuredText : rst : Implicit Hyperlink Targets`_
@@ -47,6 +49,11 @@ bind can also be used to bind Ctrl-L to clear-screen, just like in emacs mode::
 
 You need to literally input a Ctrl-L on your keyboard, you cannot type a '^'
 and then a 'L'.
+
+
+Emoji and Symbol fonts for Fedora
+=================================
+Install the package: gdouros-symbola-fonts
 
 
 Irssi Scripting
