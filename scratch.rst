@@ -75,8 +75,8 @@ Selinux list port mappings and bindings
 
 
 
-reStructuredText : rst : Implicit Hyperlink Targets
-===================================================
+reStructuredText rst Implicit Hyperlink Targets
+===============================================
 2014-11-14
 
 Ref: http://docutils.sourceforge.net/docs/user/rst/quickref.html#implicit-hyperlink-targets
@@ -90,8 +90,8 @@ Go to this website and do what it says:
 http://blog.sanctum.geek.nz/vi-mode-in-tmux/
 
 
-Fedora 21 : Customising the search path with NetworkManager
-===========================================================
+Fedora 21 Customising the search path with NetworkManager
+=========================================================
 2014-11-14
 
 In another example of 'simplifying', the option to set the dns search path
