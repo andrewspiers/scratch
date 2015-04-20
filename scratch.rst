@@ -100,8 +100,8 @@ install the package nm-connection-editor you can set the search path from
 there. see https://bugzilla.redhat.com/show_bug.cgi?id=1046701
 
 
-Stardict
-========
+Stardict Dictionary
+===================
 (Just some notes here about what else needs to be done.)
 ::
 
