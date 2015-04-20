@@ -1,26 +1,5 @@
 .. contents::
 
-
-Scratch
-=======
-
-`Clearing the screen in bash vi mode`_
-
-`Emoji and Symbol fonts for Fedora`_
-
-`Fedora 21 : Customising the search path with NetworkManager`_
-
-`reStructuredText : rst : Implicit Hyperlink Targets`_
-
-`Tmux copy and paste using vi mode`_
-
-`Stardict`_ (dictionary for freebsd)
-
-`Vim multiwindow`_
-
-`Vim folding`_
-
-
 Beer
 ====
 
