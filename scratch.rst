@@ -67,8 +67,8 @@ Puppet srv records
 
 
 
-Selinux list port mappings / bindings
-=====================================
+Selinux list port mappings and bindings
+=======================================
 2015-03-02
 
 `semanage port -l`
