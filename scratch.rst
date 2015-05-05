@@ -45,6 +45,21 @@ http://juerd.nl/site.plp/irssiscripttut
 
 http://www.irssi.org/documentation/perl
 
+Packer
+======
+We use the binary versions from http://packer.io
+
+Some working json files are in https://github.com/NeCTAR-RC/nectar-images
+In order to get this to work on ubuntu, using the qemu builder, the
+qemu-system-x86 package is required. Also, the user running packer needs to be
+in the kvm group, so for example::
+
+    sudo usermod -a -G kvm ubuntu
+
+I have found that monitoring the installation with vncviewer can interfere with
+the keypresses that packer inserts during the build phase, so it is better to
+set the environment variable PACKER_LOG (to any value) and watch the keypresses being typed in to the console. If the installer seems to get stuck, then you can
+use the vnc console to see why.
 
 Perl
 ====
