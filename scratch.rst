@@ -6,6 +6,89 @@ Beer
 Panhead American Pale Ale at some place
 in Moonee Ponds. 8.
 
+Btrfs
+=====
+When I set up my current workstation last year, I chose
+btrfs, mostly because I wanted to try something new.
+
+This morning I ran into a nasty situation where suddenly
+system load was very high and everything on my computer was
+running very slowly. I was mostly trying to read webpages at
+the time, so initially I suspected that it was in fact a network
+problem. High load and low CPU usage often means disk issues
+however, so eventually I figured out it was disk or filesystem
+related.
+
+Running `df` indicated plenty of space left, so I thought the
+problem could be physical. It turns out I didn't have smartmontools
+installed, so I tried to install that. Dnf took *AGES* to run, and
+eventually failed. I have a plugin that creates snapshots of my
+btrfs volumes and subvolumes, and I believe this is what failed,
+because it was out of space.
+
+Eventually I could confirm that I was out of space:
+
+    # btrfs fi usage /
+    Overall:
+        Device size:                 230.11GiB
+        Device allocated:       230.11GiB
+        Device unallocated:       0.00B
+        Device missing:               0.00B
+        Used:                      125.22GiB
+        Free (estimated):       103.84GiB (min: 103.84GiB)
+        Data ratio:         1.00
+        Metadata ratio:                2.00
+        Global reserve:           512.00MiB   (used: 0.00B)
+
+    Data,single: Size:217.08GiB, Used:113.24GiB
+       /dev/mapper/luks-548a9245-7942-4ae5-8fdb-fa8802b54751         217.08GiB
+
+    Metadata,single: Size:8.00MiB, Used:0.00B
+       /dev/mapper/luks-548a9245-7942-4ae5-8fdb-fa8802b54751           8.00MiB
+
+    Metadata,DUP: Size:6.50GiB, Used:5.99GiB
+       /dev/mapper/luks-548a9245-7942-4ae5-8fdb-fa8802b54751          13.00GiB
+
+    System,single: Size:4.00MiB, Used:0.00B
+       /dev/mapper/luks-548a9245-7942-4ae5-8fdb-fa8802b54751           4.00MiB
+
+    System,DUP: Size:8.00MiB, Used:48.00KiB
+       /dev/mapper/luks-548a9245-7942-4ae5-8fdb-fa8802b54751          16.00MiB
+
+    Unallocated:
+       /dev/mapper/luks-548a9245-7942-4ae5-8fdb-fa8802b54751             0.00B
+
+`btrfs subvolume list` also confirmed that there were many (over 150)
+subvolumes existing. I got rid of them all with this command::
+
+    btrfs subvolume list / | head | tail -n8 | awk '{print "/"$NF}' | xargs -n1 btrfs subvolume  delete -c
+
+I ran that until the number of subvolumes was more reasonable.
+The "`head | tail -n8`" bit ensures that the first two subvolumes listed were
+not deleted (In practice I do not think they would have been removed, as they
+had subvolumes.) I checked the amount of subvolumes remaining with `btrfs subvolume list / | wc -l`.
+
+Once this process was complete, `btrfs fi usage /` still showed no unallocated,
+although there was a lot of space listed as "Free". I think unallocated still
+means that none was available to be allocated for metadata, if that were to
+become necessary. So I decided that I also needed to rebalance the filesystem
+with these commands::
+
+  btrfs balance start -v -dusage=5 /home
+  btrfs balance start -v -dusage=20 /home
+
+These commands move data where a 'chunk' is less than the given percentage
+filled, so that some chunks become reallocated. (I am a bit uncertain exactly
+what a 'chunk' is, and how it relates to blocks and extents, and even if that
+is the correct terminology.)
+
+I used `btrfs balance status -v /home` to monitor the rebalance process.
+
+
+
+For more information, see https://btrfs.wiki.kernel.org/index.php/Problem_FAQ
+And http://marc.merlins.org/perso/btrfs/post_2014-05-04_Fixing-Btrfs-Filesystem-Full-Problems.html
+
 
 Clearing the screen in bash vi mode
 ===================================
