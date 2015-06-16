@@ -115,6 +115,17 @@ bind can also be used to bind Ctrl-L to clear-screen, just like in emacs mode::
 You need to literally input a Ctrl-L on your keyboard, you cannot type a '^'
 and then a 'L'.
 
+Designate
+=========
+
+::
+
+    designate domain-list
+    designate record-list <domain id>
+    designate record-update --data <new ip address> <domain id> <record id>
+
+
+
 
 Emoji and Symbol fonts for Fedora
 =================================
