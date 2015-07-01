@@ -159,6 +159,42 @@ Perl
 ====
 http://www.perl.org/books/beginning-perl/
 
+Puppet file permissions
+=======================
+2015-07-01
+
+From https://docs.puppetlabs.com/references/latest/type.html#file :
+"When specifying numeric permissions for directories, Puppet sets the search
+permission wherever the read permission is set."
+
+::
+
+    $ puppet apply -e "file {'/home/andrew/tmp/test': mode=>'0644', } "
+    Notice: Compiled catalog for <HOSTNAME> in environment production in 0.07 seconds
+    Notice: /Stage[main]/Main/File[/home/andrew/tmp/test]/mode: mode changed '0777' to '0755'
+    Notice: Finished catalog run in 0.02 seconds
+
+If you really want a directory with restrictive permissions, you can use
+symbolic permissions::
+
+    $ puppet apply -e "file {'/home/andrew/tmp/test': mode=>'u+rw-x,g+r-x,o+r-x', } "
+    Notice: Compiled catalog for <HOSTNAME> in environment production in 0.08 seconds
+    Notice: /Stage[main]/Main/File[/home/andrew/tmp/test]/mode: mode changed '0744' to '0644' (u+rw-x,g+r-x,o+r-x)
+    Notice: Finished catalog run in 0.02 seconds
+
+It also seems that if the mode of a file is not specified anywhere in the
+manifest, puppet uses the permission of the source file on the server. This
+can be overridden by doing something like::
+
+    File {
+      owner => 'root',
+      group => 'root',
+      mode  => '0644'
+    }
+
+in site.pp, or somehere that everything will inherit from.
+
+
 Puppetdb curl test
 ==================
 
