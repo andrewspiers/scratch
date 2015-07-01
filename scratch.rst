@@ -26,7 +26,7 @@ eventually failed. I have a plugin that creates snapshots of my
 btrfs volumes and subvolumes, and I believe this is what failed,
 because it was out of space.
 
-Eventually I could confirm that I was out of space:
+Eventually I could confirm that I was out of space::
 
     # btrfs fi usage /
     Overall:
