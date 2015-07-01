@@ -266,6 +266,19 @@ Stardict Dictionary
 
     **************************************************************************
 
+Timezones
+=========
+
+A yet to be implemented idea for a commandline summary of timezones I care
+about::
+
+    (local TZ name)            UTC
+    -------------------------------
+    10:00                    day X
+    11:00                   day X+1
+    etc
+
+
 Options
 =======
 maraschino
