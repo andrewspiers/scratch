@@ -202,6 +202,11 @@ Puppetdb curl test
 
     curl -G 'http://puppetdb.example.com:8080/v4/resources' --data-urlencode  'query= ["or", ["=", "environment", "env1"], ["=", "environment", "env2"] ] '
 
+Puppet librarian local checkout
+==============================
+First login as rvm user, then `rvm gemset use librarian`. Then::
+
+    librarian-puppet install --path=~/puppet/testing
 
 Puppet srv records
 ==================
