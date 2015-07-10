@@ -125,6 +125,9 @@ Designate
     designate record-update --data <new ip address> <domain id> <record id>
 
 
+DNS Amplification
+=================
+https://www.us-cert.gov/ncas/alerts/TA13-088A
 
 
 Emoji and Symbol fonts for Fedora
