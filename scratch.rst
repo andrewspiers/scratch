@@ -142,6 +142,16 @@ http://juerd.nl/site.plp/irssiscripttut
 
 http://www.irssi.org/documentation/perl
 
+Kibana Searches
+===============
+2015-07-14
+
+https://www.elastic.co/guide/en/kibana/3.0/queries.html
+
+One thing to watch out for  is that kibana uses quotes differently, so that
+'jenkins-jobs' matches differently to "jenkins-jobs".
+
+
 Packer
 ======
 We use the binary versions from http://packer.io
@@ -158,9 +168,11 @@ the keypresses that packer inserts during the build phase, so it is better to
 set the environment variable PACKER_LOG (to any value) and watch the keypresses being typed in to the console. If the installer seems to get stuck, then you can
 use the vnc console to see why.
 
+
 Perl
 ====
 http://www.perl.org/books/beginning-perl/
+
 
 Puppet file permissions
 =======================
@@ -206,7 +218,7 @@ Puppetdb curl test
     curl -G 'http://puppetdb.example.com:8080/v4/resources' --data-urlencode  'query= ["or", ["=", "environment", "env1"], ["=", "environment", "env2"] ] '
 
 Puppet librarian local checkout
-==============================
+===============================
 First login as rvm user, then `rvm gemset use librarian`. Then::
 
     librarian-puppet install --path=~/puppet/testing
