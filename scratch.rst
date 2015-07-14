@@ -165,8 +165,9 @@ in the kvm group, so for example::
 
 I have found that monitoring the installation with vncviewer can interfere with
 the keypresses that packer inserts during the build phase, so it is better to
-set the environment variable PACKER_LOG (to any value) and watch the keypresses being typed in to the console. If the installer seems to get stuck, then you can
-use the vnc console to see why.
+set the environment variable PACKER_LOG (to any value) and watch the keypresses
+being typed in to the console. If the installer seems to get stuck, then you
+can use the vnc console to see why.
 
 
 Perl
