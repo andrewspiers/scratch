@@ -247,6 +247,10 @@ reStructuredText rst Implicit Hyperlink Targets
 
 Ref: http://docutils.sourceforge.net/docs/user/rst/quickref.html#implicit-hyperlink-targets
 
+Sql
+===
+
+http://www.sqlstyle.guide/
 
 Tmux copy and paste using vi mode
 =================================
