@@ -174,6 +174,9 @@ Perl
 ====
 http://www.perl.org/books/beginning-perl/
 
+Python Functional Programming
+=============================
+An introduction: http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
 
 Puppet file permissions
 =======================
