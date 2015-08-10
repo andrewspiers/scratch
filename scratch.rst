@@ -137,6 +137,7 @@ Install the package: gdouros-symbola-fonts
 Gerrit : Delete a review
 ========================
 ::
+
     ssh <username>@<gerrit server> -p 29418 gerrit review <reviewnumber>,<changeset> --delete
 
 
