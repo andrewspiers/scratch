@@ -220,6 +220,11 @@ can be overridden by doing something like::
 in site.pp, or somehere that everything will inherit from.
 
 
+Puppet roles and profiles
+=========================
+http://www.craigdunn.org/2012/05/239/
+
+
 Puppetdb curl test
 ==================
 
