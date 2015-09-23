@@ -323,6 +323,30 @@ Options
 maraschino
 sickrage
 
+Openstack Nova Metadata Service
+===============================
+
+    # curl 169.254.169.254/latest/meta-data
+    ami-id
+    ami-launch-index
+    ami-manifest-path
+    block-device-mapping/
+    hostname
+    instance-action
+    instance-id
+    instance-type
+    kernel-id
+    local-hostname
+    local-ipv4
+    placement/
+    public-hostname
+    public-ipv4
+    public-keys/
+    ramdisk-id
+    reservation-id
+
+I want to find where in current openstack documentation (or code!) this is
+actually documented. The api is extremely easy to use however.
 
 Vim multiwindow
 ===============
