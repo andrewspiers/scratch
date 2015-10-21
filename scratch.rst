@@ -129,6 +129,15 @@ DNS Amplification
 =================
 https://www.us-cert.gov/ncas/alerts/TA13-088A
 
+Edac
+====
+https://www.kernel.org/doc/Documentation/edac.txt
+The command edac-util will report any errors.
+To clear the counters ( ie to silence a nagios alarm which is reporting a
+single corrected error) you should write any value into
+`/sys/devices/system/edac/mc/mc0/reset_counters`, substituting the correct
+memory controller number for `mc0`.
+
 
 Emoji and Symbol fonts for Fedora
 =================================
