@@ -143,6 +143,14 @@ Emoji and Symbol fonts for Fedora
 =================================
 Install the package: gdouros-symbola-fonts
 
+
+Gerrit : Create a new branch
+============================
+You  need to git push to the gerrit repo the new branch
+::
+
+    git push gerrit nectar/kilo
+
 Gerrit : Delete a review
 ========================
 ::
