@@ -174,6 +174,16 @@ https://www.elastic.co/guide/en/kibana/3.0/queries.html
 One thing to watch out for  is that kibana uses quotes differently, so that
 'jenkins-jobs' matches differently to "jenkins-jobs".
 
+Openstack Neutron Adding Security Group Rules
+=============================================
+2016-01-08
+
+This must be one of the worst commands ever:
+
+    neutron security-group-rule-create --tenant-id <tenant-uuid> \
+     --direction ingress --protocol tcp --ethertype IPv4 \
+    --port-range-min <port> --port-range-max <port> \
+    --remote-ip-prefix <ip/CIDR> <secgroup-uuid>
 
 Packer
 ======
