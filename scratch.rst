@@ -272,6 +272,11 @@ Puppet srv records
 
      dig _x-puppet._tcp.rc.example.com SRV
 
+Removing Old Kernels on Ubuntu and Debian Systems
+=================================================
+I've tried out a few alternatives, and using 'unattended-upgrade'
+seems to work the best for me.
+https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels
 
 
 Selinux list port mappings and bindings
