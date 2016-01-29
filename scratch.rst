@@ -185,6 +185,11 @@ This must be one of the worst commands ever:
     --port-range-min <port> --port-range-max <port> \
     --remote-ip-prefix <ip/CIDR> <secgroup-uuid>
 
+Openstack Neutron Associate Fixed ip with instance / reserve ip
+===============================================================
+
+http://web.archive.org/web/20160129000655/https://community.hpcloud.com/question/2723/how-associate-fixed-ip-instance
+
 Packer
 ======
 We use the binary versions from http://packer.io
