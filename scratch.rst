@@ -174,6 +174,23 @@ https://www.elastic.co/guide/en/kibana/3.0/queries.html
 One thing to watch out for  is that kibana uses quotes differently, so that
 'jenkins-jobs' matches differently to "jenkins-jobs".
 
+Mosquitto
+=========
+Mosquitto is an implementation of the MQTT protocol. Here are the related
+packages in Debian:
+
+http://mosquitto.org/
+Packages in Debian::
+
+    libmosquitto-dev            - MQTT version 3.1 client library, developme
+    libmosquitto1               - MQTT version 3.1 client library
+    libmosquittopp-dev          - MQTT version 3.1 client C++ library, devel
+    libmosquittopp1             - MQTT version 3.1 client C++ library
+    mosquitto                   - MQTT version 3.1/3.1.1 compatible message
+    mosquitto-clients           - Mosquitto command line MQTT clients
+    mosquitto-dbg               - debugging symbols for mosquitto binaries
+    python-mosquitto            - MQTT version 3.1 Python client library
+    python3-mosquitto           - MQTT version 3.1 Python 3 client library
 
 Packer
 ======
