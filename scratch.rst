@@ -143,6 +143,12 @@ Emoji and Symbol fonts for Fedora
 =================================
 Install the package: gdouros-symbola-fonts
 
+ESPlant
+======
+Environmental Sensor Plant - solar WiFi gardening/meteorological sensor using ESP8266 processor. I assembled one of these at the open hardware miniconf at LCA 2016 and it was a blast. THANKS CCHS MELBOURNE!
+
+https://github.com/CCHS-Melbourne/ESPlant
+
 
 Gerrit : Create a new branch
 ============================
@@ -192,6 +198,23 @@ Packages in Debian::
     python-mosquitto            - MQTT version 3.1 Python client library
     python3-mosquitto           - MQTT version 3.1 Python 3 client library
 
+
+Openstack Neutron Adding Security Group Rules
+=============================================
+2016-01-08
+
+This must be one of the worst commands ever:
+
+    neutron security-group-rule-create --tenant-id <tenant-uuid> \
+     --direction ingress --protocol tcp --ethertype IPv4 \
+    --port-range-min <port> --port-range-max <port> \
+    --remote-ip-prefix <ip/CIDR> <secgroup-uuid>
+
+Openstack Neutron Associate Fixed ip with instance / reserve ip
+===============================================================
+
+http://web.archive.org/web/20160129000655/https://community.hpcloud.com/question/2723/how-associate-fixed-ip-instance
+
 Packer
 ======
 We use the binary versions from http://packer.io
@@ -213,6 +236,14 @@ can use the vnc console to see why.
 Perl
 ====
 http://www.perl.org/books/beginning-perl/
+
+Puppet Unit Testing
+===================
+The Openstack instructions for running unit tests for their packages basically
+just say to 'bundle exec rake spec'
+ https://wiki.openstack.org/wiki/Puppet/Unit_testing I exported GEM_HOME to
+ /usr/local although maybe it should be set to 'Vendor' as described there.
+
 
 Python Functional Programming
 =============================
@@ -279,6 +310,11 @@ Puppet srv records
 
      dig _x-puppet._tcp.rc.example.com SRV
 
+Removing Old Kernels on Ubuntu and Debian Systems
+=================================================
+I've tried out a few alternatives, and using 'unattended-upgrade'
+seems to work the best for me.
+https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels
 
 
 Selinux list port mappings and bindings
