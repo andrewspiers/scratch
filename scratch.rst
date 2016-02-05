@@ -115,6 +115,14 @@ bind can also be used to bind Ctrl-L to clear-screen, just like in emacs mode::
 You need to literally input a Ctrl-L on your keyboard, you cannot type a '^'
 and then a 'L'.
 
+Dataset: Baby Names
+===================
+2016-02-05
+
+https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data
+
+Search queries get so much more interesting when you add the term 'dataset'.
+
 Designate
 =========
 
