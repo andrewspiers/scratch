@@ -6,6 +6,11 @@ Beer
 Panhead American Pale Ale at some place
 in Moonee Ponds. 8.
 
+Brookings ISIS Study
+====================
+(Randi mentions this in her LCA16 talk mirror.linux.org.au )
+http://brook.gs/1EpSQIX
+
 Btrfs
 =====
 When I set up my current workstation last year, I chose
