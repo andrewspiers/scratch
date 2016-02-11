@@ -171,6 +171,10 @@ Gerrit : Delete a review
 
     ssh <username>@<gerrit server> -p 29418 gerrit review <reviewnumber>,<changeset> --delete
 
+Grep 'or'
+=========
+I never understood exactly how to do this until I  read this.
+http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
 
 Irssi Scripting
 ===============
