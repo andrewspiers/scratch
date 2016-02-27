@@ -158,7 +158,9 @@ Install the package: gdouros-symbola-fonts
 
 ESPlant
 ======
-Environmental Sensor Plant - solar WiFi gardening/meteorological sensor using ESP8266 processor. I assembled one of these at the open hardware miniconf at LCA 2016 and it was a blast. THANKS CCHS MELBOURNE!
+Environmental Sensor Plant - solar WiFi gardening/meteorological sensor using
+ ESP8266 processor. I assembled one of these at the open hardware miniconf
+ at LCA 2016 and it was a blast. THANKS CCHS MELBOURNE!
 
 https://github.com/CCHS-Melbourne/ESPlant
 
