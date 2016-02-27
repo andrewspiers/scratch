@@ -162,6 +162,17 @@ Environmental Sensor Plant - solar WiFi gardening/meteorological sensor using ES
 
 https://github.com/CCHS-Melbourne/ESPlant
 
+Flask Installation
+==================
+I have been having way more trouble than I should installing flask into a
+virtualenv. The main problem I had was that the flask binary was not being
+created. I tried with freebsd, linux osx, and got the same trobule with a pip
+installation.
+
+However, installing from git worked, ie git clone flask, create a virtualenv
+and then from the flask dir, `pip install -e .`.  For the record commit
+e7d548595e8f2f03fb58c82 seems to work fine.
+
 
 Gerrit : Create a new branch
 ============================
