@@ -1,5 +1,9 @@
 .. contents::
 
+Australian Access Federation Attribute Validator
+================================================
+https://manager.aaf.edu.au/attributevalidator/snapshot
+
 Beer
 ====
 
