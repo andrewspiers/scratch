@@ -201,6 +201,13 @@ http://juerd.nl/site.plp/irssiscripttut
 
 http://www.irssi.org/documentation/perl
 
+Journalctl Last 24 hours ago
+============================
+::
+    journalctl --since '24 hours ago'
+
+
+
 Kibana Searches
 ===============
 2015-07-14
