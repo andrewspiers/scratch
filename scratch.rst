@@ -164,6 +164,13 @@ Environmental Sensor Plant - solar WiFi gardening/meteorological sensor using
 
 https://github.com/CCHS-Melbourne/ESPlant
 
+Findnogit
+========
+For when you want a list of all the files in a git repo without everything
+under .git::
+
+    find . -not -path './.git*'
+
 Flask Installation
 ==================
 I have been having way more trouble than I should installing flask into a
