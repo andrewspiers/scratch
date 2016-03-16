@@ -171,6 +171,10 @@ under .git::
 
     find . -not -path './.git*'
 
+or, expressed as an alias (note the handling of single quotes)::
+
+    alias findnogit=' find . -not -path '\''./.git*'\'' '
+
 Flask Installation
 ==================
 I have been having way more trouble than I should installing flask into a
