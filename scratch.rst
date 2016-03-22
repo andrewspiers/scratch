@@ -453,6 +453,11 @@ Stardict Dictionary
 
     **************************************************************************
 
+Swift
+=====
+`Runbook <http://docs.openstack.org/developer/swift/ops_runbook/index.html>`_
+
+
 Timezones
 =========
 
