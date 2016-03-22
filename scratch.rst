@@ -137,6 +137,15 @@ integrated openstackclient ::
     designate record-list <domain id>
     designate record-update --data <new ip address> <domain id> <record id>
 
+Designate Mitaka (Tokyo) Videos
+===============================
+
+https://www.openstack.org/summit/tokyo-2015/videos/presentation/dnsaas-for-your-cloud-openstack-designate
+
+https://www.openstack.org/summit/tokyo-2015/videos/presentation/rsvp-required-designate-interactive-workshop-install-and-operate-hands-on-lab
+
+https://www.openstack.org/summit/tokyo-2015/videos/presentation/get-your-instance-by-name-integration-of-nova-neutron-and-designate
+
 
 DNS Amplification
 =================
