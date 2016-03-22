@@ -128,10 +128,10 @@ https://catalog.data.gov/dataset/baby-names-from-social-security-card-applicatio
 
 Search queries get so much more interesting when you add the term 'dataset'.
 
-Designate
-=========
-
-::
+Designate Basic Commands
+========================
+These are api v1 style commands. To use v2 of the API you need to use the
+integrated openstackclient ::
 
     designate domain-list
     designate record-list <domain id>
