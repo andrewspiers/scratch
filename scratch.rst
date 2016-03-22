@@ -364,6 +364,12 @@ I've tried out a few alternatives, and using 'unattended-upgrade'
 seems to work the best for me.
 https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels
 
+reStructuredText rst Implicit Hyperlink Targets
+===============================================
+2014-11-14
+
+Ref: http://docutils.sourceforge.net/docs/user/rst/quickref.html#implicit-hyperlink-targets
+
 
 Selinux list port mappings and bindings
 =======================================
@@ -372,12 +378,6 @@ Selinux list port mappings and bindings
 `semanage port -l`
 
 
-
-reStructuredText rst Implicit Hyperlink Targets
-===============================================
-2014-11-14
-
-Ref: http://docutils.sourceforge.net/docs/user/rst/quickref.html#implicit-hyperlink-targets
 
 Sql
 ===
