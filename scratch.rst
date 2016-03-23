@@ -289,6 +289,10 @@ set the environment variable PACKER_LOG (to any value) and watch the keypresses
 being typed in to the console. If the installer seems to get stuck, then you
 can use the vnc console to see why.
 
+Openstack Neutron Metadata
+==========================
+https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/
+
 
 Perl
 ====
