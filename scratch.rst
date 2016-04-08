@@ -130,12 +130,15 @@ Search queries get so much more interesting when you add the term 'dataset'.
 
 Designate Basic Commands
 ========================
-These are api v1 style commands. To use v2 of the API you need to use the
-integrated openstackclient ::
+API v1 Commands::
 
     designate domain-list
     designate record-list <domain id>
     designate record-update --data <new ip address> <domain id> <record id>
+
+API v2 commands, using python-openstackclient::
+
+    openstack recordset create --type A oboe.instrument.com. small --records 2.3.4.5 7.8.9.10
 
 Designate Mitaka (Tokyo) Videos
 ===============================
