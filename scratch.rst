@@ -296,6 +296,12 @@ Openstack Neutron Metadata
 ==========================
 https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/
 
+PowerDNS
+========
+http://www.debiantutorials.com/installing-powerdns-as-supermaster-with-slaves/
+https://doc.powerdns.com/3/authoritative/modes-of-operation/
+https://www.digitalocean.com/community/tutorials/how-to-configure-dns-replication-on-a-slave-powerdns-server-on-ubuntu-14-04
+
 
 Perl
 ====
