@@ -258,6 +258,13 @@ Packages in Debian::
     python-mosquitto            - MQTT version 3.1 Python client library
     python3-mosquitto           - MQTT version 3.1 Python 3 client library
 
+Mysql remove tables from a database
+===================================
+
+2016-04-12
+::
+    mysql -Nse 'show tables' designate | while read table; do mysql -e "drop table $table" designate ; done
+
 
 Openstack Neutron Adding Security Group Rules
 =============================================
