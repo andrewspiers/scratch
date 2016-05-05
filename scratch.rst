@@ -318,7 +318,7 @@ Puppet Unit Testing
 ===================
 The Openstack instructions for running unit tests for their packages basically
 just say to 'bundle exec rake spec'
- https://wiki.openstack.org/wiki/Puppet/Unit_testing I exported GEM_HOME to
+https://wiki.openstack.org/wiki/Puppet/Unit_testing I exported GEM_HOME to
  /usr/local although maybe it should be set to 'Vendor' as described there.
 
 
