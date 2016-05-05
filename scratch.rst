@@ -120,6 +120,13 @@ bind can also be used to bind Ctrl-L to clear-screen, just like in emacs mode::
 You need to literally input a Ctrl-L on your keyboard, you cannot type a '^'
 and then a 'L'.
 
+Coreos
+======
+I only know the high level stuff about CoreOS, but hopefully if I watch this
+video_ and play along with the instance I've got at home, I'll soon know more.
+
+.. _video: http://mirror.linux.org.au/linux.conf.au/2015/OGGB_FP/Friday/A_CoreOS_Tutorial.webm
+
 Dataset: Baby Names
 ===================
 2016-02-05
