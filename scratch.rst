@@ -387,6 +387,36 @@ Puppet srv records
 
      dig _x-puppet._tcp.rc.example.com SRV
 
+Reboot on Hung Task
+===================
+*warning: unsynced data may be lost if you implement this!*
+
+A guide to making a machine_ reboot_ when it hits a hung task timeout.
+
+.. _machine: http://www.nico.schottelius.org/blog/reboot-linux-if-task-blocked-for-more-than-n-seconds/
+.. _reboot: http://web.archive.org/web/20160505042425/http://www.nico.schottelius.org/blog/reboot-linux-if-task-blocked-for-more-than-n-seconds/
+
+Here is a puppet class to make it happen::
+
+    # reboot when a task hangs.
+    class reboot {
+      sysctl::value { 'kernel.panic': value => '10'}
+      sysctl::value { 'kernel.hung_task_panic': value => '1'}
+      sysctl::value { 'kernel.hung_task_timeout_secs': value => '300'}
+    }
+
+    # set sysctls back to ubuntu defaults
+    class noreboot {
+      sysctl::value { 'kernel.panic': value => '0'}
+      sysctl::value { 'kernel.hung_task_panic': value => '1'}
+      sysctl::value { 'kernel.hung_task_timeout_secs': value => '120'}
+    }
+
+    include reboot
+
+And finally, the documentation for all the linux kernel sysctls:
+https://www.kernel.org/doc/Documentation/sysctl/kernel.txt
+
 Removing Old Kernels on Ubuntu and Debian Systems
 =================================================
 I've tried out a few alternatives, and using 'unattended-upgrade'
