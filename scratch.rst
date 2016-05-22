@@ -1,15 +1,17 @@
 .. contents::
 
-Beer
-====
 
-Panhead American Pale Ale at some place
-in Moonee Ponds. 8.
-
-Brookings ISIS Study
 ====================
-(Randi mentions this in her LCA16 talk mirror.linux.org.au )
-http://brook.gs/1EpSQIX
+
+Brookings ISIS study_ (Randi mentions this in her LCA16 talk_ 'Open Sourcing
+Anti Harassment Methodologies'.
+
+.. _study: http://brook.gs/1EpSQIX
+.. _talk: http://mirror.linux.org.au/linux.conf.au/2016/04_Thursday/D4.303_Costa_Theatre/Open_Sourcing_AntiHarassment_Methodologies.webm
+
+The anti harassment stuff hits a personal sweet spot of data mining, web
+scraping, and network mapping that is technically intriguing as well as being
+socially useful.
 
 Btrfs
 =====
@@ -206,13 +208,6 @@ and then from the flask dir, `pip install -e .`.  For the record commit
 e7d548595e8f2f03fb58c82 seems to work fine.
 
 
-Gerrit : Create a new branch
-============================
-You  need to git push to the gerrit repo the new branch
-::
-
-    git push gerrit nectar/kilo
-
 Gerrit : Delete a review
 ========================
 ::
@@ -232,8 +227,13 @@ local and global combined.
 
 Grep 'or'
 =========
-I never understood exactly how to do this until I  read this.
-http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
+I never understood exactly how to do express a disjunction_ until I  read this
+helpful guide_.
+
+.. _disjunction: https://en.wikipedia.org/wiki/Logical_disjunction
+.. _guilde: http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
+
+
 
 Irssi Scripting
 ===============
@@ -242,11 +242,11 @@ http://juerd.nl/site.plp/irssiscripttut
 
 http://www.irssi.org/documentation/perl
 
+
 Journalctl Last 24 hours ago
 ============================
 ::
     journalctl --since '24 hours ago'
-
 
 
 Kibana Searches
@@ -289,7 +289,7 @@ Openstack Neutron Adding Security Group Rules
 =============================================
 2016-01-08
 
-This must be one of the worst commands ever:
+This must be one of the worst or at least longest commands ever:
 
     neutron security-group-rule-create --tenant-id <tenant-uuid> \
     --direction ingress --protocol tcp --ethertype IPv4 \
@@ -408,7 +408,7 @@ Puppet srv records
 
 Reboot on Hung Task
 ===================
-*warning: unsynced data may be lost if you implement this!*
+*warning: data not synced to disk may be lost if you implement this!*
 
 A guide to making a machine_ reboot_ when it hits a hung task timeout.
 
@@ -438,9 +438,15 @@ https://www.kernel.org/doc/Documentation/sysctl/kernel.txt
 
 Removing Old Kernels on Ubuntu and Debian Systems
 =================================================
-I've tried out a few alternatives, and using 'unattended-upgrade'
-seems to work the best for me.
-https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels
+I've tried out a few alternatives_, and using 'unattended-upgrade'
+seems to work the best for me, ie: "Locate the line:
+
+    //Unattended-Upgrade::Remove-Unused-Dependencies "false";
+
+Uncomment the line AND change the value to "true".
+
+.. _alternatives: https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels
+
 
 reStructuredText rst Implicit Hyperlink Targets
 ===============================================
@@ -480,13 +486,10 @@ install the package nm-connection-editor you can set the search path from
 there. see https://bugzilla.redhat.com/show_bug.cgi?id=1046701
 
 
-Options
-=======
-maraschino
-sickrage
-
 Openstack Nova Metadata Service
 ===============================
+
+::
 
     # curl 169.254.169.254/latest/meta-data
     ami-id
@@ -507,8 +510,8 @@ Openstack Nova Metadata Service
     ramdisk-id
     reservation-id
 
-I want to find where in current openstack documentation (or code!) this is
-actually documented. The api is extremely easy to use however.
+I haven't yet found where this is documented. The api is extremely easy to use
+however.
 
 Stardict Dictionary
 ===================
