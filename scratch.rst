@@ -176,7 +176,7 @@ Emoji and Symbol fonts for Fedora
 Install the package: gdouros-symbola-fonts
 
 ESPlant
-======
+=======
 Environmental Sensor Plant - solar WiFi gardening/meteorological sensor using
  ESP8266 processor. I assembled one of these at the open hardware miniconf
  at LCA 2016 and it was a blast. THANKS CCHS MELBOURNE!
@@ -184,7 +184,7 @@ Environmental Sensor Plant - solar WiFi gardening/meteorological sensor using
 https://github.com/CCHS-Melbourne/ESPlant
 
 Findnogit
-========
+=========
 For when you want a list of all the files in a git repo without everything
 under .git::
 
@@ -270,6 +270,7 @@ Mysql remove tables from a database
 
 2016-04-12
 ::
+
     mysql -Nse 'show tables' designate | while read table; do mysql -e "drop table $table" designate ; done
 
 
@@ -280,7 +281,7 @@ Openstack Neutron Adding Security Group Rules
 This must be one of the worst commands ever:
 
     neutron security-group-rule-create --tenant-id <tenant-uuid> \
-     --direction ingress --protocol tcp --ethertype IPv4 \
+    --direction ingress --protocol tcp --ethertype IPv4 \
     --port-range-min <port> --port-range-max <port> \
     --remote-ip-prefix <ip/CIDR> <secgroup-uuid>
 
@@ -326,7 +327,7 @@ Puppet Unit Testing
 The Openstack instructions for running unit tests for their packages basically
 just say to 'bundle exec rake spec'
 https://wiki.openstack.org/wiki/Puppet/Unit_testing I exported GEM_HOME to
- /usr/local although maybe it should be set to 'Vendor' as described there.
+/usr/local although maybe it should be set to 'Vendor' as described there.
 
 
 Python Functional Programming
