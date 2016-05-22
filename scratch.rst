@@ -1,18 +1,5 @@
 .. contents::
 
-
-====================
-
-Brookings ISIS study_ (Randi mentions this in her LCA16 talk_ 'Open Sourcing
-Anti Harassment Methodologies'.
-
-.. _study: http://brook.gs/1EpSQIX
-.. _talk: http://mirror.linux.org.au/linux.conf.au/2016/04_Thursday/D4.303_Costa_Theatre/Open_Sourcing_AntiHarassment_Methodologies.webm
-
-The anti harassment stuff hits a personal sweet spot of data mining, web
-scraping, and network mapping that is technically intriguing as well as being
-socially useful.
-
 Btrfs
 =====
 When I set up my current workstation last year, I chose
@@ -283,6 +270,21 @@ Mysql remove tables from a database
 ::
 
     mysql -Nse 'show tables' designate | while read table; do mysql -e "drop table $table" designate ; done
+
+
+Open Sourcing Anti Harassment Methodologies
+===========================================
+
+Randi Harper gave this excellent, interesting talk_ . In it she cites a study_
+from the Brookings Project_ on U.S. Relations with the Islamic World.
+
+.. _study: http://brook.gs/1EpSQIX
+.. _talk: http://mirror.linux.org.au/linux.conf.au/2016/04_Thursday/D4.303_Costa_Theatre/Open_Sourcing_AntiHarassment_Methodologies.webm
+.. _Project: http://www.brookings.edu
+
+The anti harassment stuff hits a personal sweet spot of data mining, web
+scraping, and network mapping that is technically intriguing as well as being
+socially useful.
 
 
 Openstack Neutron Adding Security Group Rules
