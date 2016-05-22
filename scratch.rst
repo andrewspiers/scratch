@@ -219,6 +219,17 @@ Gerrit : Delete a review
 
     ssh <username>@<gerrit server> -p 29418 gerrit review <reviewnumber>,<changeset> --delete
 
+
+Git: dump current config
+========================
+This dumps the current config of git as applies to the current context, ie
+local and global combined.
+
+::
+
+     git config --get-regexp '.*'
+
+
 Grep 'or'
 =========
 I never understood exactly how to do this until I  read this.
