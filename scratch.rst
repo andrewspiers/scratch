@@ -159,6 +159,13 @@ single corrected error) you should write any value into
 `/sys/devices/system/edac/mc/mc0/reset_counters`, substituting the correct
 memory controller number for `mc0`.
 
+Errno EAI_AGAIN
+===============
+This is the descriptive error that npm returns when it can't get to the network
+to download packages. This could be caused because you are running in a
+pbuilder environement and using the default setting which is to switch off
+networking. You can permit networking to work in this environment by setting
+`USENETWORK=yes` in `/etc/pbuilderrc`.
 
 Emoji and Symbol fonts for Fedora
 =================================
