@@ -498,7 +498,7 @@ there. see https://bugzilla.redhat.com/show_bug.cgi?id=1046701
 Openstack Nova Metadata Service
 ===============================
 
-::
+ec2 api ::
 
     # curl 169.254.169.254/latest/meta-data
     ami-id
@@ -521,6 +521,12 @@ Openstack Nova Metadata Service
 
 I haven't yet found where this is documented. The api is extremely easy to use
 however.
+
+openstack api ::
+
+    # curl http://169.254.169.254/openstack/latest/
+
+
 
 Stardict Dictionary
 ===================
