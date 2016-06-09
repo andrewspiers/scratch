@@ -605,3 +605,16 @@ Vim folding commands::
     zE deletes all folds.
     [z move to start of open fold.
     ]z move to end of open fold.
+
+
+Windows Socks5 Web Tunnelling
+=============================
+
+Guide_ I use putty, pageant, and chrome with the 'Feed Proxy' extension.
+And I use icanhazip.com_ and Google Maps to verify that the proxy is working.
+I haven't double checked if there is any DNS leakage with this method yet, but
+it works for my purposes, which is connecting to internally-accessible web
+servers at work.
+
+.. _Guide: https://www.ocf.berkeley.edu/~xuanluo/sshproxywin.html
+.. _icanhazip.com: http://icanhazip.com
