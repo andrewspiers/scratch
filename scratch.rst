@@ -230,6 +230,15 @@ helpful guide_.
 .. _guide: http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
 
 
+Ipython
+=======
+2016-06-24
+
+New version with better inline editing!::
+
+    pip install --upgrade ipython prompt_toolkit --pre
+
+https://twitter.com/Mbussonn/status/743581861314584576
 
 Irssi Scripting
 ===============
