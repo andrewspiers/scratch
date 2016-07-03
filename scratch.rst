@@ -135,6 +135,8 @@ API v1 Commands::
 API v2 commands, using python-openstackclient::
 
     openstack recordset create --type A oboe.instrument.com. small --records 2.3.4.5 7.8.9.10
+    openstack recordset create --type PTR 1.168.192.in-addr.arpa. 25 --records twentyfive.example.com.
+
 
 Designate Mitaka (Tokyo) Videos
 ===============================
@@ -228,6 +230,15 @@ helpful guide_.
 .. _guide: http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
 
 
+Ipython
+=======
+2016-06-24
+
+New version with better inline editing!::
+
+    pip install --upgrade ipython prompt_toolkit --pre
+
+https://twitter.com/Mbussonn/status/743581861314584576
 
 Irssi Scripting
 ===============
