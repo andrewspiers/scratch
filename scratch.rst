@@ -401,6 +401,21 @@ can be overridden by doing something like::
 in site.pp, or somehere that everything will inherit from.
 
 
+Puppet : Install specific versions from gems into rvm
+=====================================================
+Fedora packages puppet 4, our environment runs on puppet 3, so for local
+testing and validation I install puppet in a gemset and reference it with
+wrapper scripts. To create the gemset::
+
+    rvm gemset create p3
+    rvm gemset use p3
+    gem install puppet -v 3.8.7
+    gem install puppet-lint
+
+The wrapper script I use to use the gemset is at
+https://github.com/andrewspiers/pup/
+
+
 Puppet roles and profiles
 =========================
 http://www.craigdunn.org/2012/05/239/
