@@ -617,6 +617,7 @@ Vim folding
 ===========
 Vim folding commands::
 
+    :set foldmethod=indent  : fold on indent (good for python)
     zf#j creates a fold from the cursor down # lines.
     zf/string creates a fold from the cursor to string .
     zj moves the cursor to the next fold.
