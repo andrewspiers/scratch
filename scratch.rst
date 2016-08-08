@@ -497,6 +497,10 @@ Selinux list port mappings and bindings
 
 `semanage port -l`
 
+Slack Enormous Emoji
+====================
+
+https://github.com/andybotting/chrome-slack-enormous-emoji
 
 
 Sql
