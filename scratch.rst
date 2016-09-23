@@ -226,10 +226,10 @@ local and global combined.
 Grep 'or'
 =========
 I never understood exactly how to do express a disjunction_ until I  read this
-helpful guide_.
+helpful `guide`__ .
 
 .. _disjunction: https://en.wikipedia.org/wiki/Logical_disjunction
-.. _guide: http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
+.. __:  http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
 
 
 Ipython
