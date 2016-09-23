@@ -134,6 +134,7 @@ API v1 Commands::
 
 API v2 commands, using python-openstackclient::
 
+    openstack zone list
     openstack recordset create --type A oboe.instrument.com. small --records 2.3.4.5 7.8.9.10
     openstack recordset create --type PTR 1.168.192.in-addr.arpa. 25 --records twentyfive.example.com.
     openstack recordset set oboe.instrument.com. small.oboe.instrument.com. --records 11.12.13.14
