@@ -168,7 +168,7 @@ Errno EAI_AGAIN
 ===============
 This is the descriptive error that npm returns when it can't get to the network
 to download packages. This could be caused because you are running in a
-pbuilder environement and using the default setting which is to switch off
+pbuilder environment and using the default setting which is to switch off
 networking. You can permit networking to work in this environment by setting
 `USENETWORK=yes` in `/etc/pbuilderrc`.
 
