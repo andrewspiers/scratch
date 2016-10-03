@@ -124,6 +124,13 @@ bind can also be used to bind Ctrl-L to clear-screen, just like in emacs mode::
 You need to literally input a Ctrl-L on your keyboard, you cannot type a '^'
 and then a 'L'.
 
+Coreos
+======
+I only know the high level stuff about CoreOS, but hopefully if I watch this
+video_ and play along with the instance I've got at home, I'll soon know more.
+
+.. _video: http://mirror.linux.org.au/linux.conf.au/2015/OGGB_FP/Friday/A_CoreOS_Tutorial.webm
+
 Dataset: Baby Names
 ===================
 2016-02-05
@@ -132,14 +139,31 @@ https://catalog.data.gov/dataset/baby-names-from-social-security-card-applicatio
 
 Search queries get so much more interesting when you add the term 'dataset'.
 
-Designate
-=========
-
-::
+Designate Basic Commands
+========================
+API v1 Commands::
 
     designate domain-list
     designate record-list <domain id>
     designate record-update --data <new ip address> <domain id> <record id>
+
+API v2 commands, using python-openstackclient::
+
+    openstack zone list
+    openstack recordset list oboe.instrument.com.
+    openstack recordset create --type A oboe.instrument.com. small --records 2.3.4.5 7.8.9.10
+    openstack recordset create --type PTR 1.168.192.in-addr.arpa. 25 --records twentyfive.example.com.
+    openstack recordset set oboe.instrument.com. small.oboe.instrument.com. --records 11.12.13.14
+
+
+Designate Mitaka (Tokyo) Videos
+===============================
+
+https://www.openstack.org/summit/tokyo-2015/videos/presentation/dnsaas-for-your-cloud-openstack-designate
+
+https://www.openstack.org/summit/tokyo-2015/videos/presentation/rsvp-required-designate-interactive-workshop-install-and-operate-hands-on-lab
+
+https://www.openstack.org/summit/tokyo-2015/videos/presentation/get-your-instance-by-name-integration-of-nova-neutron-and-designate
 
 
 DNS Amplification
@@ -155,18 +179,36 @@ single corrected error) you should write any value into
 `/sys/devices/system/edac/mc/mc0/reset_counters`, substituting the correct
 memory controller number for `mc0`.
 
+Errno EAI_AGAIN
+===============
+This is the descriptive error that npm returns when it can't get to the network
+to download packages. This could be caused because you are running in a
+pbuilder environment and using the default setting which is to switch off
+networking. You can permit networking to work in this environment by setting
+`USENETWORK=yes` in `/etc/pbuilderrc`.
 
 Emoji and Symbol fonts for Fedora
 =================================
 Install the package: gdouros-symbola-fonts
 
 ESPlant
-======
+=======
 Environmental Sensor Plant - solar WiFi gardening/meteorological sensor using
  ESP8266 processor. I assembled one of these at the open hardware miniconf
  at LCA 2016 and it was a blast. THANKS CCHS MELBOURNE!
 
 https://github.com/CCHS-Melbourne/ESPlant
+
+Findnogit
+=========
+For when you want a list of all the files in a git repo without everything
+under .git::
+
+    find . -not -path './.git*'
+
+or, expressed as an alias (note the handling of single quotes)::
+
+    alias findnogit=' find . -not -path '\''./.git*'\'' '
 
 Flask Installation
 ==================
@@ -180,23 +222,41 @@ and then from the flask dir, `pip install -e .`.  For the record commit
 e7d548595e8f2f03fb58c82 seems to work fine.
 
 
-Gerrit : Create a new branch
-============================
-You  need to git push to the gerrit repo the new branch
-::
-
-    git push gerrit nectar/kilo
-
 Gerrit : Delete a review
 ========================
 ::
 
     ssh <username>@<gerrit server> -p 29418 gerrit review <reviewnumber>,<changeset> --delete
 
+
+Git: dump current config
+========================
+This dumps the current config of git as applies to the current context, ie
+local and global combined.
+
+::
+
+     git config --get-regexp '.*'
+
+
 Grep 'or'
 =========
-I never understood exactly how to do this until I  read this.
-http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
+I never understood exactly how to do express a disjunction_ until I  read this
+helpful `guide`__ .
+
+.. _disjunction: https://en.wikipedia.org/wiki/Logical_disjunction
+.. __:  http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
+
+
+Ipython
+=======
+2016-06-24
+
+New version with better inline editing!::
+
+    pip install --upgrade ipython prompt_toolkit --pre
+
+https://twitter.com/Mbussonn/status/743581861314584576
 
 Irssi Scripting
 ===============
@@ -204,6 +264,13 @@ Irssi Scripting
 http://juerd.nl/site.plp/irssiscripttut
 
 http://www.irssi.org/documentation/perl
+
+
+Journalctl Last 24 hours ago
+============================
+::
+    journalctl --since '24 hours ago'
+
 
 Kibana Searches
 ===============
@@ -232,15 +299,38 @@ Packages in Debian::
     python-mosquitto            - MQTT version 3.1 Python client library
     python3-mosquitto           - MQTT version 3.1 Python 3 client library
 
+Mysql remove tables from a database
+===================================
+
+2016-04-12
+::
+
+    mysql -Nse 'show tables' designate | while read table; do mysql -e "drop table $table" designate ; done
+
+
+Open Sourcing Anti Harassment Methodologies
+===========================================
+
+Randi Harper gave this excellent, interesting talk_ . In it she cites a study_
+from the Brookings Project_ on U.S. Relations with the Islamic World.
+
+.. _study: http://brook.gs/1EpSQIX
+.. _talk: http://mirror.linux.org.au/linux.conf.au/2016/04_Thursday/D4.303_Costa_Theatre/Open_Sourcing_AntiHarassment_Methodologies.webm
+.. _Project: http://www.brookings.edu
+
+The anti harassment stuff hits a personal sweet spot of data mining, web
+scraping, and network mapping that is technically intriguing as well as being
+socially useful.
+
 
 Openstack Neutron Adding Security Group Rules
 =============================================
 2016-01-08
 
-This must be one of the worst commands ever:
+This must be one of the worst or at least longest commands ever:
 
     neutron security-group-rule-create --tenant-id <tenant-uuid> \
-     --direction ingress --protocol tcp --ethertype IPv4 \
+    --direction ingress --protocol tcp --ethertype IPv4 \
     --port-range-min <port> --port-range-max <port> \
     --remote-ip-prefix <ip/CIDR> <secgroup-uuid>
 
@@ -266,6 +356,16 @@ set the environment variable PACKER_LOG (to any value) and watch the keypresses
 being typed in to the console. If the installer seems to get stuck, then you
 can use the vnc console to see why.
 
+Openstack Neutron Metadata
+==========================
+https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/
+
+PowerDNS
+========
+http://www.debiantutorials.com/installing-powerdns-as-supermaster-with-slaves/
+https://doc.powerdns.com/3/authoritative/modes-of-operation/
+https://www.digitalocean.com/community/tutorials/how-to-configure-dns-replication-on-a-slave-powerdns-server-on-ubuntu-14-04
+
 
 Perl
 ====
@@ -275,8 +375,8 @@ Puppet Unit Testing
 ===================
 The Openstack instructions for running unit tests for their packages basically
 just say to 'bundle exec rake spec'
- https://wiki.openstack.org/wiki/Puppet/Unit_testing I exported GEM_HOME to
- /usr/local although maybe it should be set to 'Vendor' as described there.
+https://wiki.openstack.org/wiki/Puppet/Unit_testing I exported GEM_HOME to
+/usr/local although maybe it should be set to 'Vendor' as described there.
 
 
 Python Functional Programming
@@ -319,6 +419,21 @@ can be overridden by doing something like::
 in site.pp, or somehere that everything will inherit from.
 
 
+Puppet : Install specific versions from gems into rvm
+=====================================================
+Fedora packages puppet 4, our environment runs on puppet 3, so for local
+testing and validation I install puppet in a gemset and reference it with
+wrapper scripts. To create the gemset::
+
+    rvm gemset create p3
+    rvm gemset use p3
+    gem install puppet -v 3.8.7
+    gem install puppet-lint
+
+The wrapper script I use to use the gemset is at
+https://github.com/andrewspiers/pup/
+
+
 Puppet roles and profiles
 =========================
 http://www.craigdunn.org/2012/05/239/
@@ -344,11 +459,53 @@ Puppet srv records
 
      dig _x-puppet._tcp.rc.example.com SRV
 
+Reboot on Hung Task
+===================
+*warning: data not synced to disk may be lost if you implement this!*
+
+A guide to making a machine_ reboot_ when it hits a hung task timeout.
+
+.. _machine: http://www.nico.schottelius.org/blog/reboot-linux-if-task-blocked-for-more-than-n-seconds/
+.. _reboot: http://web.archive.org/web/20160505042425/http://www.nico.schottelius.org/blog/reboot-linux-if-task-blocked-for-more-than-n-seconds/
+
+Here is a puppet class to make it happen::
+
+    # reboot when a task hangs.
+    class reboot {
+      sysctl::value { 'kernel.panic': value => '10'}
+      sysctl::value { 'kernel.hung_task_panic': value => '1'}
+      sysctl::value { 'kernel.hung_task_timeout_secs': value => '300'}
+    }
+
+    # set sysctls back to ubuntu defaults
+    class noreboot {
+      sysctl::value { 'kernel.panic': value => '0'}
+      sysctl::value { 'kernel.hung_task_panic': value => '1'}
+      sysctl::value { 'kernel.hung_task_timeout_secs': value => '120'}
+    }
+
+    include reboot
+
+And finally, the documentation for all the linux kernel sysctls:
+https://www.kernel.org/doc/Documentation/sysctl/kernel.txt
+
 Removing Old Kernels on Ubuntu and Debian Systems
 =================================================
-I've tried out a few alternatives, and using 'unattended-upgrade'
-seems to work the best for me.
-https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels
+I've tried out a few alternatives_, and using 'unattended-upgrade'
+seems to work the best for me, ie: "Locate the line:
+
+    //Unattended-Upgrade::Remove-Unused-Dependencies "false";
+
+Uncomment the line AND change the value to "true".
+
+.. _alternatives: https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels
+
+
+reStructuredText rst Implicit Hyperlink Targets
+===============================================
+2014-11-14
+
+Ref: http://docutils.sourceforge.net/docs/user/rst/quickref.html#implicit-hyperlink-targets
 
 
 Selinux list port mappings and bindings
@@ -357,13 +514,11 @@ Selinux list port mappings and bindings
 
 `semanage port -l`
 
+Slack Enormous Emoji
+====================
 
+https://github.com/andybotting/chrome-slack-enormous-emoji
 
-reStructuredText rst Implicit Hyperlink Targets
-===============================================
-2014-11-14
-
-Ref: http://docutils.sourceforge.net/docs/user/rst/quickref.html#implicit-hyperlink-targets
 
 Sql
 ===
@@ -388,6 +543,39 @@ install the package nm-connection-editor you can set the search path from
 there. see https://bugzilla.redhat.com/show_bug.cgi?id=1046701
 
 
+Openstack Nova Metadata Service
+===============================
+
+ec2 api ::
+
+    # curl 169.254.169.254/latest/meta-data
+    ami-id
+    ami-launch-index
+    ami-manifest-path
+    block-device-mapping/
+    hostname
+    instance-action
+    instance-id
+    instance-type
+    kernel-id
+    local-hostname
+    local-ipv4
+    placement/
+    public-hostname
+    public-ipv4
+    public-keys/
+    ramdisk-id
+    reservation-id
+
+I haven't yet found where this is documented. The api is extremely easy to use
+however.
+
+openstack api ::
+
+    # curl http://169.254.169.254/openstack/latest/
+
+
+
 Stardict Dictionary
 ===================
 (Just some notes here about what else needs to be done.)
@@ -409,6 +597,11 @@ Stardict Dictionary
 
     **************************************************************************
 
+Swift
+=====
+`Runbook <http://docs.openstack.org/developer/swift/ops_runbook/index.html>`_
+
+
 Timezones
 =========
 
@@ -421,36 +614,6 @@ about::
     11:00                   day X+1
     etc
 
-
-Options
-=======
-maraschino
-sickrage
-
-Openstack Nova Metadata Service
-===============================
-
-    # curl 169.254.169.254/latest/meta-data
-    ami-id
-    ami-launch-index
-    ami-manifest-path
-    block-device-mapping/
-    hostname
-    instance-action
-    instance-id
-    instance-type
-    kernel-id
-    local-hostname
-    local-ipv4
-    placement/
-    public-hostname
-    public-ipv4
-    public-keys/
-    ramdisk-id
-    reservation-id
-
-I want to find where in current openstack documentation (or code!) this is
-actually documented. The api is extremely easy to use however.
 
 Vim multiwindow
 ===============
@@ -476,6 +639,7 @@ Vim folding
 ===========
 Vim folding commands::
 
+    :set foldmethod=indent  : fold on indent (good for python)
     zf#j creates a fold from the cursor down # lines.
     zf/string creates a fold from the cursor to string .
     zj moves the cursor to the next fold.
@@ -490,3 +654,16 @@ Vim folding commands::
     zE deletes all folds.
     [z move to start of open fold.
     ]z move to end of open fold.
+
+
+Windows Socks5 Web Tunnelling
+=============================
+
+Guide_ I use putty, pageant, and chrome with the 'Feed Proxy' extension.
+And I use icanhazip.com_ and Google Maps to verify that the proxy is working.
+I haven't double checked if there is any DNS leakage with this method yet, but
+it works for my purposes, which is connecting to internally-accessible web
+servers at work.
+
+.. _Guide: https://www.ocf.berkeley.edu/~xuanluo/sshproxywin.html
+.. _icanhazip.com: http://icanhazip.com
