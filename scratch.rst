@@ -222,6 +222,14 @@ and then from the flask dir, `pip install -e .`.  For the record commit
 e7d548595e8f2f03fb58c82 seems to work fine.
 
 
+Galera and Mysql : Check synchronization state
+==============================================
+
+::
+
+    mysql -e "SHOW STATUS LIKE 'wsrep_%'"
+
+
 Gerrit : Delete a review
 ========================
 ::
