@@ -170,8 +170,8 @@ DNS Amplification
 =================
 https://www.us-cert.gov/ncas/alerts/TA13-088A
 
-Edac
-====
+Edac : Error Detection And Correction
+=====================================
 https://www.kernel.org/doc/Documentation/edac.txt
 The command edac-util will report any errors.
 To clear the counters ( ie to silence a nagios alarm which is reporting a
