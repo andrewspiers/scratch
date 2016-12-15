@@ -170,6 +170,18 @@ DNS Amplification
 =================
 https://www.us-cert.gov/ncas/alerts/TA13-088A
 
+
+Docker : Cleaning up after yourself
+===================================
+2016-12-15
+
+See this post: http://blog.yohanliyanage.com/2015/05/docker-clean-up-after-yourself/
+
+Run these commands::
+
+    docker rm -v $(docker ps -a -q -f status=exited)
+    docker rmi $(docker images -f "dangling=true" -q)
+
 Edac : Error Detection And Correction
 =====================================
 https://www.kernel.org/doc/Documentation/edac.txt
