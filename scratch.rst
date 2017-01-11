@@ -18,11 +18,6 @@ Australian Access Federation Attribute Validator
 ================================================
 https://manager.aaf.edu.au/attributevalidator/snapshot
 
-Beer
-====
-
-Panhead American Pale Ale at some place
-in Moonee Ponds. 8.
 
 Brookings ISIS Study
 ====================
