@@ -8,6 +8,12 @@ Alphabetize every file in the tree
     find . -type f -execdir sort {} -o {} \;
 
 
+Ansible and Idrac
+=================
+https://www.stackhpc.com/ansible-drac.html
+
+
+
 Australian Access Federation Attribute Validator
 ================================================
 https://manager.aaf.edu.au/attributevalidator/snapshot
