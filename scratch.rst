@@ -21,7 +21,8 @@ https://manager.aaf.edu.au/attributevalidator/snapshot
 
 Brookings ISIS Study
 ====================
-(Randi mentions this in her LCA16 talk mirror.linux.org.au )
+This is a study of ISIS supporters on Twitter. Mainly interesting for
+its methods. Randi Harper mentions this in her LCA16 talk mirror.linux.org.au
 http://brook.gs/1EpSQIX
 
 Btrfs
