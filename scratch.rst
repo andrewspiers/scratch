@@ -1,5 +1,13 @@
 .. contents::
 
+Alphabetize every file in the tree
+==================================
+
+::
+
+    find . -type f -execdir sort {} -o {} \;
+
+
 Australian Access Federation Attribute Validator
 ================================================
 https://manager.aaf.edu.au/attributevalidator/snapshot
