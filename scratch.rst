@@ -556,6 +556,17 @@ Sql
 
 http://www.sqlstyle.guide/
 
+ssh-agent and sourcing it in to your shell
+==========================================
+2016-10-04
+
+This is of particular benefit if you are logging
+in to the system you want ssh-agent running on,
+which is not the usual case.
+
+http://mah.everybody.org/docs/ssh
+
+
 Tmux copy and paste using vi mode
 =================================
 2014-11-14
