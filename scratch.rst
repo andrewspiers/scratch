@@ -272,10 +272,15 @@ local and global combined.
 
 Git: dump full content of all commits
 =====================================
-I'm not 100% sure this does what I think it does, but this is what I'm
-using at the moment::
+I'm not 100% sure this does what I think it does, but this is what
+I'm using at the moment::
 
     git log --format=format:%H --all | xargs git show
+
+This will not show dangling commits though, so it might be good to
+also do::
+
+    git fsck --lost-found 2>/dev/null | awk '{print $3}' | git show
 
 
 Grep 'or'
