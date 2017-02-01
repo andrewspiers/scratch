@@ -270,6 +270,14 @@ local and global combined.
      git config --get-regexp '.*'
 
 
+Git: dump full content of all commits
+=====================================
+I'm not 100% sure this does what I think it does, but this is what I'm
+using at the moment::
+
+    git log --format=format:%H --all | xargs git show
+
+
 Grep 'or'
 =========
 I never understood exactly how to do express a disjunction_ until I  read this
