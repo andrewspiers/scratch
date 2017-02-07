@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# TODO: I'm not sure that this is reading the style sheet correctly, need
+# to check that it is using the right css, and experiment with it.
+
 import logging
 import os
 import sys
