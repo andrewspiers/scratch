@@ -631,6 +631,28 @@ openstack api ::
 
 
 
+SOCKS5 Proxy over SSH
+=====================
+I've just got the following stanza in my `~/.ssh/config`::
+
+
+    Host servername
+      Compression yes
+      DynamicForward {{ portnumber }}
+      Hostname server.example.com
+      User username
+
+Chrome permits you to use multiple profiles with different settings and
+different plugins. I have a profile set up with a plugin called 'Proxy Helper'
+https://github.com/henices/Chrome-proxy-helper with this portnumber configured
+in the port number and 127.0.0.1 in the host address field. Now when I connect
+to `'servername'` my web traffic is sent over that SOCKS5 port. I believe DNS
+lookups originating from this profile are also sent over this link, as I was
+able to resolve names I've got listed on a home DNS server. What doesn't change
+is my search path, so I just use the full (internal) name to look things up.
+
+
+
 Stardict Dictionary
 ===================
 (Just some notes here about what else needs to be done.)
