@@ -193,6 +193,18 @@ Run these commands::
     docker rm -v $(docker ps -a -q -f status=exited)
     docker rmi $(docker images -f "dangling=true" -q)
 
+Docker: Access Docker socket within container
+=============================================
+2017-03-03
+
+::
+
+    docker run -v /var/run/docker.sock:/container/path/docker.sock
+
+Not to be done lightly, but sometimes useful.
+
+
+
 Edac : Error Detection And Correction
 =====================================
 https://www.kernel.org/doc/Documentation/edac.txt
