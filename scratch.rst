@@ -204,6 +204,19 @@ Docker: Access Docker socket within container
 Not to be done lightly, but sometimes useful.
 
 
+Docker : Command line tools in containers
+=========================================
+2017-03-23
+
+There is a reasonably good guide to using command line tools in docker:
+https://spin.atomicobject.com/2015/11/30/command-line-tools-docker/
+It has some examples here:
+https://github.com/atomicobject/docker-cli-distribution
+
+I don't think every problem is solved perfectly, ie you can't really pass in
+files outside the current working directory as arguments to command line tools,
+but if you need to do it, this is a good starting point.
+
 
 Edac : Error Detection And Correction
 =====================================
