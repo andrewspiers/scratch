@@ -258,6 +258,13 @@ or, expressed as an alias (note the handling of single quotes)::
 
     alias findnogit=' find . -not -path '\''./.git*'\'' '
 
+Flask Documentation
+===================
+2017-03-27
+
+https://www.palletsprojects.com/p/flask/ just because it is not at Pocoo any
+more.
+
 Flask Installation
 ==================
 I have been having way more trouble than I should installing flask into a
