@@ -329,7 +329,7 @@ IPv6 rules
 ==========
 I found a good basic set of firewall rules for IPv6 systems. If your system has
 any ipv6 addresses with *global scope* you should take a look at
-these rules_ from cert_.org
+these rules_ from cert_.org.
 
 .. _rules: https://www.cert.org/downloads/IPv6/ip6tables_rules.txt
 .. _cert: https://www.cert.org
