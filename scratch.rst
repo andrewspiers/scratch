@@ -30,6 +30,7 @@ Btrfs
 When I set up my current workstation last year, I chose
 btrfs, mostly because I wanted to try something new.
 
+
 This morning I ran into a nasty situation where suddenly
 system load was very high and everything on my computer was
 running very slowly. I was mostly trying to read webpages at
@@ -328,7 +329,7 @@ IPv6 rules
 ==========
 I found a good basic set of firewall rules for IPv6 systems. If your system has
 any ipv6 addresses with *global scope* you should take a look at
-`these rules`__ from `cert.org`__
+`these rules`_ from `cert.org`_
 
 .. _rules: https://www.cert.org/downloads/IPv6/ip6tables_rules.txt
 .. _org: https://www.cert.org
