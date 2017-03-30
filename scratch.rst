@@ -324,6 +324,15 @@ helpful `guide`__ .
 .. __:  http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
 
 
+IPv6 rules
+==========
+I found a good basic set of firewall rules for IPv6 systems. If your system has
+any ipv6 addresses with *global scope* you should take a look at
+`these rules`__ from `cert.org`__
+
+.. _rules: https://www.cert.org/downloads/IPv6/ip6tables_rules.txt
+.. _org: https://www.cert.org
+
 Ipython
 =======
 2016-06-24
