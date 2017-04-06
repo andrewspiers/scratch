@@ -367,6 +367,22 @@ https://www.elastic.co/guide/en/kibana/3.0/queries.html
 One thing to watch out for  is that kibana uses quotes differently, so that
 'jenkins-jobs' matches differently to "jenkins-jobs".
 
+Maximum Environment Size
+========================
+http://stackoverflow.com/questions/1078031/what-is-the-maximum-size-of-an-environment-variable-value
+
+http://man7.org/linux/man-pages/man2/execve.2.html
+
+::
+
+    On kernel 2.6.23 and later, most architectures support a size limit
+    derived from the soft RLIMIT_STACK resource limit (see getrlimit(2))
+    that is in force at the time of the execve() call.  (Architectures
+    with no memory management unit are excepted: they maintain the limit
+    that was in effect before kernel 2.6.23.)  This change allows
+    programs to have a much larger argument and/or environment list.
+
+
 Mosquitto
 =========
 Mosquitto is an implementation of the MQTT protocol. Here are the related
