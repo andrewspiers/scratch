@@ -793,6 +793,19 @@ Vim folding commands::
     ]z move to end of open fold.
 
 
+
+Visual Studio Code plugins
+==========================
+I have received the following suggestions:
+
+* Docker
+* Paty Intellisense
+* vscode-icons
+
+And I like:
+* Vim
+
+
 Windows Socks5 Web Tunnelling
 =============================
 
