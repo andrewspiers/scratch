@@ -219,9 +219,10 @@ files outside the current working directory as arguments to command line tools,
 but if you need to do it, this is a good starting point.
 
 
-Docker Compose snippet to set *initial* username and password for Mongodb::
-===========================================================================
+Docker Compose snippet to set *initial* username and password for Mongodb
+=========================================================================
 
+::
 
     version: "2"
     services:
