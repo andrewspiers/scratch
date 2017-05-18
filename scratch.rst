@@ -219,6 +219,21 @@ files outside the current working directory as arguments to command line tools,
 but if you need to do it, this is a good starting point.
 
 
+Docker Compose snippet to set *initial* username and password for Mongodb::
+===========================================================================
+
+
+    version: "2"
+    services:
+      worker: # mongo database
+        image: library/mongo
+        ports:
+          - 27017:27017
+        environment:
+          - MONGO_INITDB_ROOT_USERNAME=user
+          - MONGO_INITDB_ROOT_PASSWORD=pass
+
+
 Edac : Error Detection And Correction
 =====================================
 https://www.kernel.org/doc/Documentation/edac.txt
