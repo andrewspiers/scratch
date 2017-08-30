@@ -577,6 +577,26 @@ Puppet srv records
 
      dig _x-puppet._tcp.rc.example.com SRV
 
+Python : Numpy datetime64
+=========================
+Numpy uses a type called datetime64, which does not have the useful methods
+like `.year`, `.month` and so on that regular python datetimes have.
+Fortunately you can use pandas to convert to a pandas timestamp which has many
+of these convenient methods
+
+::
+
+    In [5]: t = numpy.datetime64('2017-08-30')
+
+    In [6]: p = pandas.to_datetime(t)
+
+    In [7]: p
+    Out[7]: Timestamp('2017-08-30 00:00:00')
+
+    In [8]: p.year
+    Out[8]: 2017
+
+
 Reboot on Hung Task
 ===================
 *warning: data not synced to disk may be lost if you implement this!*
