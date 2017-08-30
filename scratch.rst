@@ -497,10 +497,6 @@ https://wiki.openstack.org/wiki/Puppet/Unit_testing I exported GEM_HOME to
 /usr/local although maybe it should be set to 'Vendor' as described there.
 
 
-Python Functional Programming
-=============================
-An introduction: http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
-
 Puppet file permissions
 =======================
 2015-07-01
@@ -577,8 +573,14 @@ Puppet srv records
 
      dig _x-puppet._tcp.rc.example.com SRV
 
-Python : Numpy datetime64
-=========================
+
+Python Functional Programming
+=============================
+An introduction: http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
+
+
+Python Numpy datetime64
+=======================
 Numpy uses a type called datetime64, which does not have the useful methods
 like `.year`, `.month` and so on that regular python datetimes have.
 Fortunately you can use pandas to convert to a pandas timestamp which has many
