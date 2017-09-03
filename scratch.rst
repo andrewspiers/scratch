@@ -307,6 +307,31 @@ Galera and Mysql : Check synchronization state
     mysql -e "SHOW STATUS LIKE 'wsrep_%'"
 
 
+Gearman : Issues with Documentation
+===================================
+
+These are some very rough notes, I could be wrong about all this stuff!!
+
+* The Debian packaged version (from Jessie) 1.0.6-5 doesn't support
+the -vvv switch specified at http://gearman.org/getting-started/
+
+My fork of the source of that is at:
+    https://github.com/andrewspiers/gearman.github.io/blob/master/pages/getting_started.txt
+
+* Building from source: Needs libtool, autoconf, boost ( libboost-all-dev ),
+gperf, libevent-dev, uuid-dev
+
+* In many ways, .travis.yml is better documentation than the getting started
+ file.
+
+This is not a complaint about documentation, just a general gripe:
+* The debian packaged version of gearmand packaged in gearman-job-server
+logs to a file /var/log/gearmand.log, not to the foreground.
+ ( side note: this is poor packaging design IMO. The binary should just behave
+as it is shipped, and there should be a *service* that wraps this, and when
+started, logs to a log file ( or maybe just the journal.) )
+
+
 Gerrit : Delete a review
 ========================
 ::
