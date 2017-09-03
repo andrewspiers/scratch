@@ -234,6 +234,11 @@ Docker Compose snippet to set *initial* username and password for Mongodb
           - MONGO_INITDB_ROOT_USERNAME=user
           - MONGO_INITDB_ROOT_PASSWORD=pass
 
+Docker : Logging
+================
+The reference https://docs.docker.com/engine/admin/logging/view_container_logs/
+Contains useful information about techniques for redirecting process output
+from file to stderr and stdout.
 
 Edac : Error Detection And Correction
 =====================================
