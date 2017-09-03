@@ -135,6 +135,12 @@ bind can also be used to bind Ctrl-L to clear-screen, just like in emacs mode::
 You need to literally input a Ctrl-L on your keyboard, you cannot type a '^'
 and then a 'L'.
 
+
+Conda Cheat Sheet
+=================
+https://conda.io/docs/_downloads/conda-cheatsheet.pdf
+
+
 Coreos
 ======
 I only know the high level stuff about CoreOS, but hopefully if I watch this
