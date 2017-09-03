@@ -30,6 +30,7 @@ Btrfs
 When I set up my current workstation last year, I chose
 btrfs, mostly because I wanted to try something new.
 
+
 This morning I ran into a nasty situation where suddenly
 system load was very high and everything on my computer was
 running very slowly. I was mostly trying to read webpages at
@@ -193,6 +194,52 @@ Run these commands::
     docker rm -v $(docker ps -a -q -f status=exited)
     docker rmi $(docker images -f "dangling=true" -q)
 
+Docker: Access Docker socket within container
+=============================================
+2017-03-03
+
+::
+
+    docker run -v /var/run/docker.sock:/container/path/docker.sock
+
+Not to be done lightly, but sometimes useful.
+
+
+Docker : Command line tools in containers
+=========================================
+2017-03-23
+
+There is a reasonably good guide to using command line tools in docker:
+https://spin.atomicobject.com/2015/11/30/command-line-tools-docker/
+It has some examples here:
+https://github.com/atomicobject/docker-cli-distribution
+
+I don't think every problem is solved perfectly, ie you can't really pass in
+files outside the current working directory as arguments to command line tools,
+but if you need to do it, this is a good starting point.
+
+
+Docker Compose snippet to set *initial* username and password for Mongodb
+=========================================================================
+
+::
+
+    version: "2"
+    services:
+      worker: # mongo database
+        image: library/mongo
+        ports:
+          - 27017:27017
+        environment:
+          - MONGO_INITDB_ROOT_USERNAME=user
+          - MONGO_INITDB_ROOT_PASSWORD=pass
+
+Docker : Logging
+================
+The reference https://docs.docker.com/engine/admin/logging/view_container_logs/
+Contains useful information about techniques for redirecting process output
+from file to stderr and stdout.
+
 Edac : Error Detection And Correction
 =====================================
 https://www.kernel.org/doc/Documentation/edac.txt
@@ -233,6 +280,13 @@ or, expressed as an alias (note the handling of single quotes)::
 
     alias findnogit=' find . -not -path '\''./.git*'\'' '
 
+Flask Documentation
+===================
+2017-03-27
+
+https://www.palletsprojects.com/p/flask/ just because it is not at Pocoo any
+more.
+
 Flask Installation
 ==================
 I have been having way more trouble than I should installing flask into a
@@ -253,6 +307,31 @@ Galera and Mysql : Check synchronization state
     mysql -e "SHOW STATUS LIKE 'wsrep_%'"
 
 
+Gearman : Issues with Documentation
+===================================
+
+These are some very rough notes, I could be wrong about all this stuff!!
+
+* The Debian packaged version (from Jessie) 1.0.6-5 doesn't support
+the -vvv switch specified at http://gearman.org/getting-started/
+
+My fork of the source of that is at:
+    https://github.com/andrewspiers/gearman.github.io/blob/master/pages/getting_started.txt
+
+* Building from source: Needs libtool, autoconf, boost ( libboost-all-dev ),
+gperf, libevent-dev, uuid-dev
+
+* In many ways, .travis.yml is better documentation than the getting started
+ file.
+
+This is not a complaint about documentation, just a general gripe:
+* The debian packaged version of gearmand packaged in gearman-job-server
+logs to a file /var/log/gearmand.log, not to the foreground.
+ ( side note: this is poor packaging design IMO. The binary should just behave
+as it is shipped, and there should be a *service* that wraps this, and when
+started, logs to a log file ( or maybe just the journal.) )
+
+
 Gerrit : Delete a review
 ========================
 ::
@@ -270,6 +349,19 @@ local and global combined.
      git config --get-regexp '.*'
 
 
+Git: dump full content of all commits
+=====================================
+I'm not 100% sure this does what I think it does, but this is what
+I'm using at the moment::
+
+    git log --format=format:%H --all | xargs git show
+
+This will not show dangling commits though, so it might be good to
+also do::
+
+    git fsck --lost-found 2>/dev/null | awk '{print $3}' | git show
+
+
 Grep 'or'
 =========
 I never understood exactly how to do express a disjunction_ until I  read this
@@ -278,6 +370,15 @@ helpful `guide`__ .
 .. _disjunction: https://en.wikipedia.org/wiki/Logical_disjunction
 .. __:  http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
 
+
+IPv6 rules
+==========
+I found a good basic set of firewall rules for IPv6 systems. If your system has
+any ipv6 addresses with *global scope* you should take a look at
+these rules_ from cert_.org.
+
+.. _rules: https://www.cert.org/downloads/IPv6/ip6tables_rules.txt
+.. _cert: https://www.cert.org
 
 Ipython
 =======
@@ -311,6 +412,22 @@ https://www.elastic.co/guide/en/kibana/3.0/queries.html
 
 One thing to watch out for  is that kibana uses quotes differently, so that
 'jenkins-jobs' matches differently to "jenkins-jobs".
+
+Maximum Environment Size
+========================
+http://stackoverflow.com/questions/1078031/what-is-the-maximum-size-of-an-environment-variable-value
+
+http://man7.org/linux/man-pages/man2/execve.2.html
+
+::
+
+    On kernel 2.6.23 and later, most architectures support a size limit
+    derived from the soft RLIMIT_STACK resource limit (see getrlimit(2))
+    that is in force at the time of the execve() call.  (Architectures
+    with no memory management unit are excepted: they maintain the limit
+    that was in effect before kernel 2.6.23.)  This change allows
+    programs to have a much larger argument and/or environment list.
+
 
 Mosquitto
 =========
@@ -410,10 +527,6 @@ https://wiki.openstack.org/wiki/Puppet/Unit_testing I exported GEM_HOME to
 /usr/local although maybe it should be set to 'Vendor' as described there.
 
 
-Python Functional Programming
-=============================
-An introduction: http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
-
 Puppet file permissions
 =======================
 2015-07-01
@@ -489,6 +602,32 @@ Puppet srv records
 ::
 
      dig _x-puppet._tcp.rc.example.com SRV
+
+
+Python Functional Programming
+=============================
+An introduction: http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
+
+
+Python Numpy datetime64
+=======================
+Numpy uses a type called datetime64, which does not have the useful methods
+like `.year`, `.month` and so on that regular python datetimes have.
+Fortunately you can use pandas to convert to a pandas timestamp which has many
+of these convenient methods
+
+::
+
+    In [5]: t = numpy.datetime64('2017-08-30')
+
+    In [6]: p = pandas.to_datetime(t)
+
+    In [7]: p
+    Out[7]: Timestamp('2017-08-30 00:00:00')
+
+    In [8]: p.year
+    Out[8]: 2017
+
 
 Reboot on Hung Task
 ===================
@@ -618,6 +757,30 @@ openstack api ::
 
 
 
+SOCKS5 Proxy over SSH
+=====================
+2017-02-07
+
+I've just got the following stanza in my `~/.ssh/config`::
+
+
+    Host servername
+      Compression yes
+      DynamicForward {{ portnumber }}
+      Hostname server.example.com
+      User username
+
+Chrome permits you to use multiple profiles with different settings and
+different plugins. I have a profile set up with a plugin called 'Proxy Helper'
+https://github.com/henices/Chrome-proxy-helper with this portnumber configured
+in the port number and 127.0.0.1 in the host address field. Now when I connect
+to `'servername'` my web traffic is sent over that SOCKS5 port. I believe DNS
+lookups originating from this profile are also sent over this link, as I was
+able to resolve names I've got listed on a home DNS server. What doesn't change
+is my search path, so I just use the full (internal) name to look things up.
+
+
+
 Stardict Dictionary
 ===================
 (Just some notes here about what else needs to be done.)
@@ -696,6 +859,20 @@ Vim folding commands::
     zE deletes all folds.
     [z move to start of open fold.
     ]z move to end of open fold.
+
+
+
+Visual Studio Code plugins
+==========================
+I have received the following suggestions:
+
+* Docker
+* Paty Intellisense
+* vscode-icons
+
+And I like:
+
+* Vim
 
 
 Windows Socks5 Web Tunnelling
