@@ -881,6 +881,25 @@ And I like:
 * Vim
 
 
+Wikipedia API for queries
+=========================
+2017-09-30
+
+Reference_
+
+Example query::
+
+    https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json
+
+There are several output formats_, but unless you want formatted html, you
+should always use `json`. `jsonfm` gives you back formatted html with the
+`text/html` Content-type.
+
+
+.. _Reference: https://www.mediawiki.org/wiki/API:Query
+.. _formats: https://www.mediawiki.org/wiki/API:Data_formats
+
+
 Windows Socks5 Web Tunnelling
 =============================
 
