@@ -135,6 +135,12 @@ bind can also be used to bind Ctrl-L to clear-screen, just like in emacs mode::
 You need to literally input a Ctrl-L on your keyboard, you cannot type a '^'
 and then a 'L'.
 
+
+Conda Cheat Sheet
+=================
+https://conda.io/docs/_downloads/conda-cheatsheet.pdf
+
+
 Coreos
 ======
 I only know the high level stuff about CoreOS, but hopefully if I watch this
@@ -234,6 +240,11 @@ Docker Compose snippet to set *initial* username and password for Mongodb
           - MONGO_INITDB_ROOT_USERNAME=user
           - MONGO_INITDB_ROOT_PASSWORD=pass
 
+Docker : Logging
+================
+The reference https://docs.docker.com/engine/admin/logging/view_container_logs/
+Contains useful information about techniques for redirecting process output
+from file to stderr and stdout.
 
 Edac : Error Detection And Correction
 =====================================
@@ -300,6 +311,31 @@ Galera and Mysql : Check synchronization state
 ::
 
     mysql -e "SHOW STATUS LIKE 'wsrep_%'"
+
+
+Gearman : Issues with Documentation
+===================================
+
+These are some very rough notes, I could be wrong about all this stuff!!
+
+* The Debian packaged version (from Jessie) 1.0.6-5 doesn't support
+the -vvv switch specified at http://gearman.org/getting-started/
+
+My fork of the source of that is at:
+    https://github.com/andrewspiers/gearman.github.io/blob/master/pages/getting_started.txt
+
+* Building from source: Needs libtool, autoconf, boost ( libboost-all-dev ),
+gperf, libevent-dev, uuid-dev
+
+* In many ways, .travis.yml is better documentation than the getting started
+ file.
+
+This is not a complaint about documentation, just a general gripe:
+* The debian packaged version of gearmand packaged in gearman-job-server
+logs to a file /var/log/gearmand.log, not to the foreground.
+ ( side note: this is poor packaging design IMO. The binary should just behave
+as it is shipped, and there should be a *service* that wraps this, and when
+started, logs to a log file ( or maybe just the journal.) )
 
 
 Gerrit : Delete a review
@@ -854,6 +890,25 @@ I have received the following suggestions:
 And I like:
 
 * Vim
+
+
+Wikipedia API for queries
+=========================
+2017-09-30
+
+Reference_
+
+Example query::
+
+    https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json
+
+There are several output formats_, but unless you want formatted html, you
+should always use `json`. `jsonfm` gives you back formatted html with the
+`text/html` Content-type.
+
+
+.. _Reference: https://www.mediawiki.org/wiki/API:Query
+.. _formats: https://www.mediawiki.org/wiki/API:Data_formats
 
 
 Windows Socks5 Web Tunnelling
