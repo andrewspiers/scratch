@@ -367,6 +367,17 @@ http://juerd.nl/site.plp/irssiscripttut
 
 http://www.irssi.org/documentation/perl
 
+Jenkinsfile Documentation
+=========================
+::
+    // Jenkinsfile , Declarative Pipeline
+    // References:
+    // https://jenkins.io/doc/book/pipeline/jenkinsfile/
+    // https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline
+    // https://jenkins.io/blog/2016/12/19/declarative-pipeline-beta/
+    // https://www.cloudbees.com/sites/default/files/declarative-pipeline-refcard.pdf
+    // http://davehunt.co.uk/2017/03/23/migrating-to-declarative-jenkins-pipelines.html
+
 
 Journalctl Last 24 hours ago
 ============================
