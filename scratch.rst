@@ -368,6 +368,17 @@ also do::
     git fsck --lost-found 2>/dev/null | awk '{print $3}' | git show
 
 
+Git: remote tracking branch
+===========================
+
+::
+
+    git checkout --track origin/serverfix
+
+from:
+    https://git-scm.com/book/id/v2/Git-Branching-Remote-Branches
+
+
 Grep 'or'
 =========
 I never understood exactly how to do express a disjunction_ until I  read this
