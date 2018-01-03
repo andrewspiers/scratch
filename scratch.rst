@@ -414,6 +414,14 @@ http://juerd.nl/site.plp/irssiscripttut
 
 http://www.irssi.org/documentation/perl
 
+
+Javascript : Using Promises
+===========================
+2018-01-03
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
+
+
 Jenkinsfile Documentation
 =========================
 ::
