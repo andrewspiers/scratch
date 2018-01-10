@@ -422,6 +422,19 @@ Javascript : Using Promises
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
 
 
+Jenkins Bitbucket branch source plugin
+======================================
+This plugin_ enables the automatic creation of Jenkins jobs for repositories
+located within a project or personal space within a bitbucket server instance,
+or on bitbucket.org. It will try to create jobs for each Jenkins file it finds
+on each branch for each repo within the project. There is a trick to setting
+it up for bitbucket server: you need define the server within the global
+configuration, for it to appear as an option you can use within the job
+creation screen.
+
+.. _plugin: https://wiki.jenkins.io/display/JENKINS/Bitbucket+Branch+Source+Plugin
+
+
 Jenkinsfile Documentation
 =========================
 ::
