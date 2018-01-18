@@ -877,6 +877,7 @@ multiwindow commands::
 
   :split filename  - split window and load another file
   ctrl-w up arrow  - move cursor up a window
+  ctrl-w ctrl-r    - rotate windows (swap positions)
   ctrl-w ctrl-w    - move cursor to another window (cycle)
   ctrl-w_          - maximize current window
   ctrl-w=          - make all equal size
