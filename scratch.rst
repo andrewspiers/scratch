@@ -391,11 +391,16 @@ helpful `guide`__ .
 Haskell Resources
 =================
 
-Haskell fast and hard:
-http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/#
-Learn you a Haskell for great good:
-http://learnyouahaskell.com/chapters
-
+* Haskell fast and hard:
+ http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/#
+* Learn you a Haskell for great good:
+ http://learnyouahaskell.com/chapters
+* A gentle introduction to Haskell:
+ https://www.haskell.org/tutorial/index.html
+* The Haskell Book
+ http://haskellbook.com/
+* Monads for Functional Programming
+ https://scholar.google.com.au/scholar?hl=en&as_sdt=0%2C5&q=Monads+for+Functional+Programming+In+Advanced+Functional+Programming&btnG=
 
 IPv6 rules
 ==========
