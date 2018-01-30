@@ -388,6 +388,15 @@ helpful `guide`__ .
 .. __:  http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
 
 
+Haskell Resources
+=================
+
+Haskell fast and hard:
+http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/#
+Learn you a Haskell for great good:
+http://learnyouahaskell.com/chapters
+
+
 IPv6 rules
 ==========
 I found a good basic set of firewall rules for IPv6 systems. If your system has
