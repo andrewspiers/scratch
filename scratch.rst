@@ -345,6 +345,15 @@ Gerrit : Delete a review
     ssh <username>@<gerrit server> -p 29418 gerrit review <reviewnumber>,<changeset> --delete
 
 
+Git: Delete remote branch
+=========================
+2018-02-01
+
+Delete the branch 'oldbranch' from remote 'origin' ::
+
+    git push origin --delete oldbranch
+
+
 Git: dump current config
 ========================
 This dumps the current config of git as applies to the current context, ie
