@@ -485,6 +485,12 @@ https://www.elastic.co/guide/en/kibana/3.0/queries.html
 One thing to watch out for  is that kibana uses quotes differently, so that
 'jenkins-jobs' matches differently to "jenkins-jobs".
 
+
+Kubectl Cheat Sheet
+===================
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+
 Maximum Environment Size
 ========================
 http://stackoverflow.com/questions/1078031/what-is-the-maximum-size-of-an-environment-variable-value
