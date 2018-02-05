@@ -319,23 +319,24 @@ Gearman : Issues with Documentation
 These are some very rough notes, I could be wrong about all this stuff!!
 
 * The Debian packaged version (from Jessie) 1.0.6-5 doesn't support
-the -vvv switch specified at http://gearman.org/getting-started/
+  the -vvv switch specified at http://gearman.org/getting-started/
 
 My fork of the source of that is at:
     https://github.com/andrewspiers/gearman.github.io/blob/master/pages/getting_started.txt
 
 * Building from source: Needs libtool, autoconf, boost ( libboost-all-dev ),
-gperf, libevent-dev, uuid-dev
+  gperf, libevent-dev, uuid-dev
 
 * In many ways, .travis.yml is better documentation than the getting started
- file.
+  file.
 
 This is not a complaint about documentation, just a general gripe:
+
 * The debian packaged version of gearmand packaged in gearman-job-server
-logs to a file /var/log/gearmand.log, not to the foreground.
- ( side note: this is poor packaging design IMO. The binary should just behave
-as it is shipped, and there should be a *service* that wraps this, and when
-started, logs to a log file ( or maybe just the journal.) )
+  logs to a file /var/log/gearmand.log, not to the foreground.
+  ( side note: this is poor packaging design IMO. The binary should just behave
+  as it is shipped, and there should be a *service* that wraps this, and when
+  started, logs to a log file ( or maybe just the journal.) )
 
 
 Gerrit : Delete a review
@@ -401,15 +402,15 @@ Haskell Resources
 =================
 
 * Haskell fast and hard:
- http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/#
+  http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/#
 * Learn you a Haskell for great good:
- http://learnyouahaskell.com/chapters
+  http://learnyouahaskell.com/chapters
 * A gentle introduction to Haskell:
- https://www.haskell.org/tutorial/index.html
+  https://www.haskell.org/tutorial/index.html
 * The Haskell Book
- http://haskellbook.com/
+  http://haskellbook.com/
 * Monads for Functional Programming
- https://scholar.google.com.au/scholar?hl=en&as_sdt=0%2C5&q=Monads+for+Functional+Programming+In+Advanced+Functional+Programming&btnG=
+  https://scholar.google.com.au/scholar?hl=en&as_sdt=0%2C5&q=Monads+for+Functional+Programming+In+Advanced+Functional+Programming&btnG=
 
 IPv6 rules
 ==========
