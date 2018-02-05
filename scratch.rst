@@ -598,6 +598,29 @@ Perl
 ====
 http://www.perl.org/books/beginning-perl/
 
+
+Python Profiling
+================
+2018-02-05
+
+The base of python profilng is cProfile_ . The python profiling module also
+includes pstats, which formats the profiling data. The pymotw_ page on these is
+worthwhile. You can use gprof2dot_ to create a 'dot' file which is a
+representation of a network graph. Alternatively you can use cprofilev_ to
+obtain a sortable html view of the cprofile output.
+
+A slightly different approach is taken by line_profiler_ which will give you
+line by line performance profiling of certain functions, where you have added a
+decorator.
+
+
+.. _cProfile: https://docs.python.org/3/library/profile.html
+.. _cprofilev: https://github.com/ymichael/cprofilev
+.. _pymotw: https://pymotw.com/3/profile/
+.. _line_profiler: https://github.com/rkern/line_profiler
+.. _gprof2dot: https://github.com/jrfonseca/gprof2dot
+
+
 Puppet Unit Testing
 ===================
 The Openstack instructions for running unit tests for their packages basically
