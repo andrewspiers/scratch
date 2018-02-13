@@ -255,6 +255,9 @@ single corrected error) you should write any value into
 `/sys/devices/system/edac/mc/mc0/reset_counters`, substituting the correct
 memory controller number for `mc0`.
 
+Emlog circular files for linux:
+===============================
+http://www.circlemud.org/jelson/software/emlog/
 Errno EAI_AGAIN
 ===============
 This is the descriptive error that npm returns when it can't get to the network
