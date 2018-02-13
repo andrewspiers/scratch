@@ -258,6 +258,13 @@ memory controller number for `mc0`.
 Emlog circular files for linux:
 ===============================
 http://www.circlemud.org/jelson/software/emlog/
+
+
+
+Emoji and Symbol fonts for Fedora
+=================================
+Install the package: gdouros-symbola-fonts
+
 Errno EAI_AGAIN
 ===============
 This is the descriptive error that npm returns when it can't get to the network
@@ -266,9 +273,6 @@ pbuilder environment and using the default setting which is to switch off
 networking. You can permit networking to work in this environment by setting
 `USENETWORK=yes` in `/etc/pbuilderrc`.
 
-Emoji and Symbol fonts for Fedora
-=================================
-Install the package: gdouros-symbola-fonts
 
 ESPlant
 =======
