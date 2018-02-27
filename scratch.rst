@@ -25,6 +25,13 @@ This is a study of ISIS supporters on Twitter. Mainly interesting for
 its methods. Randi Harper mentions this in her LCA16 talk mirror.linux.org.au
 http://brook.gs/1EpSQIX
 
+
+Benchmarking Disk I/O ( with fio )
+==================================
+Nice quick writeup and examples:
+https://web.archive.org/web/20170608050506/https://www.binarylane.com.au/support/solutions/articles/1000055889-how-to-benchmark-disk-i-o
+
+
 Btrfs
 =====
 When I set up my current workstation last year, I chose
