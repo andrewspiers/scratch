@@ -978,6 +978,12 @@ Vim folding commands::
     ]z move to end of open fold.
 
 
+Vim left margin via folding abuse
+=================================
+You can use `set foldcolumn=12` to give yourself 12 characters of
+margin space. This doesn't indent your text and makes things nicer
+when you are using full screen.
+
 
 Visual Studio Code plugins
 ==========================
