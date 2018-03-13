@@ -360,15 +360,6 @@ Gerrit : Delete a review
     ssh <username>@<gerrit server> -p 29418 gerrit review <reviewnumber>,<changeset> --delete
 
 
-Git: Delete remote branch
-=========================
-2018-02-01
-
-Delete the branch 'oldbranch' from remote 'origin' ::
-
-    git push origin --delete oldbranch
-
-
 Git: dump current config
 ========================
 This dumps the current config of git as applies to the current context, ie
@@ -395,11 +386,21 @@ also do::
 Git: remote tracking branch
 ===========================
 
-::
+Check out a remote branch to track it::
 
     git checkout --track origin/serverfix
 
-from:
+When you are done, Delete the branch 'oldbranch' from remote 'origin' ::
+
+    git push origin --delete oldbranch
+
+If someone else has deleted remote branches (on the remote) and you
+want to remove your local copy of those references, run::
+
+    git fetch --prune
+
+
+ref:
     https://git-scm.com/book/id/v2/Git-Branching-Remote-Branches
 
 
