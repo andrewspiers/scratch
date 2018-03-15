@@ -616,6 +616,8 @@ http://www.perl.org/books/beginning-perl/
 
 Python Logging
 ==============
+2018-03-15
+
 three line logging::
 
     import logging
