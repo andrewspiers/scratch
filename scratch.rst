@@ -614,6 +614,25 @@ Perl
 http://www.perl.org/books/beginning-perl/
 
 
+Python Logging
+==============
+three line logging::
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+    logging.debug('message')
+
+only turn logging up to DEBUG for my script::
+    import logging
+    logging.basicConfig(level=logging.WARNING)
+    logging.getLogger(__name__).setLevel(logging.DEBUG)
+
+set debug logging everywhere except for that noisy requests module::
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+    logging.getLogger("requests").setLevel(logging.WARNING)
+
+
+
 Python Profiling
 ================
 2018-02-05
