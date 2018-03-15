@@ -581,6 +581,12 @@ Openstack Neutron Associate Fixed ip with instance / reserve ip
 
 http://web.archive.org/web/20160129000655/https://community.hpcloud.com/question/2723/how-associate-fixed-ip-instance
 
+
+Openstack Neutron Metadata
+==========================
+https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/
+
+
 Packer
 ======
 We use the binary versions from http://packer.io
@@ -598,9 +604,6 @@ set the environment variable PACKER_LOG (to any value) and watch the keypresses
 being typed in to the console. If the installer seems to get stuck, then you
 can use the vnc console to see why.
 
-Openstack Neutron Metadata
-==========================
-https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/
 
 PowerDNS
 ========
@@ -612,52 +615,6 @@ https://www.digitalocean.com/community/tutorials/how-to-configure-dns-replicatio
 Perl
 ====
 http://www.perl.org/books/beginning-perl/
-
-
-Python Logging
-==============
-2018-03-15
-
-Three line logging::
-
-    import logging
-    logging.basicConfig(level=logging.DEBUG)
-    logging.debug('message')
-
-Only turn logging up to DEBUG for my script::
-
-    import logging
-    logging.basicConfig(level=logging.WARNING)
-    logging.getLogger(__name__).setLevel(logging.DEBUG)
-
-Set debug logging everywhere except for that noisy requests module::
-
-    import logging
-    logging.basicConfig(level=logging.DEBUG)
-    logging.getLogger("requests").setLevel(logging.WARNING)
-
-
-
-Python Profiling
-================
-2018-02-05
-
-The base of python profilng is cProfile_ . The python profiling module also
-includes pstats, which formats the profiling data. The pymotw_ page on these is
-worthwhile. You can use gprof2dot_ to create a 'dot' file which is a
-representation of a network graph. Alternatively you can use cprofilev_ to
-obtain a sortable html view of the cprofile output.
-
-A slightly different approach is taken by line_profiler_ which will give you
-line by line performance profiling of certain functions, where you have added a
-decorator.
-
-
-.. _cProfile: https://docs.python.org/3/library/profile.html
-.. _cprofilev: https://github.com/ymichael/cprofilev
-.. _pymotw: https://pymotw.com/3/profile/
-.. _line_profiler: https://github.com/rkern/line_profiler
-.. _gprof2dot: https://github.com/jrfonseca/gprof2dot
 
 
 Puppet Unit Testing
@@ -750,6 +707,29 @@ Python Functional Programming
 An introduction: http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
 
 
+Python Logging
+==============
+2018-03-15
+
+Three line logging::
+
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+    logging.debug('message')
+
+Only turn logging up to DEBUG for my script::
+
+    import logging
+    logging.basicConfig(level=logging.WARNING)
+    logging.getLogger(__name__).setLevel(logging.DEBUG)
+
+Set debug logging everywhere except for that noisy requests module::
+
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+    logging.getLogger("requests").setLevel(logging.WARNING)
+
+
 Python Numpy datetime64
 =======================
 Numpy uses a type called datetime64, which does not have the useful methods
@@ -768,6 +748,28 @@ of these convenient methods
 
     In [8]: p.year
     Out[8]: 2017
+
+
+Python Profiling
+================
+2018-02-05
+
+The base of python profilng is cProfile_ . The python profiling module also
+includes pstats, which formats the profiling data. The pymotw_ page on these is
+worthwhile. You can use gprof2dot_ to create a 'dot' file which is a
+representation of a network graph. Alternatively you can use cprofilev_ to
+obtain a sortable html view of the cprofile output.
+
+A slightly different approach is taken by line_profiler_ which will give you
+line by line performance profiling of certain functions, where you have added a
+decorator.
+
+
+.. _cProfile: https://docs.python.org/3/library/profile.html
+.. _cprofilev: https://github.com/ymichael/cprofilev
+.. _pymotw: https://pymotw.com/3/profile/
+.. _line_profiler: https://github.com/rkern/line_profiler
+.. _gprof2dot: https://github.com/jrfonseca/gprof2dot
 
 
 Reboot on Hung Task
@@ -799,6 +801,7 @@ Here is a puppet class to make it happen::
 
 And finally, the documentation for all the linux kernel sysctls:
 https://www.kernel.org/doc/Documentation/sysctl/kernel.txt
+
 
 Removing Old Kernels on Ubuntu and Debian Systems
 =================================================
