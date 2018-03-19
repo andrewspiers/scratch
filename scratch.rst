@@ -508,6 +508,25 @@ Kubectl Cheat Sheet
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
 
+Kubernetes ( kubectl ) Client Side Debugging:
+=============================================
+Similarly to the openstack client, it is possible to make kubectl log its
+outgoing requests. It is not well documented. `kubectl --help` output includes
+the following line::
+
+    Use "kubectl options" for a list of global command-line options (applies to all commands).
+
+`kubectl options` includes this line::
+
+    -v, --v=0: log level for V logs
+
+This commit_ adds debugging levels 6,7,8 and 9 to the client. The files
+debugging.go, helper.go, and request.go have been moved, although the
+functionality seems to remain.
+
+.. _commit: https://github.com/kubernetes/kubernetes/pull/10032/commits/bab0a61ef1e68e2dc780656a9f12eb7d347175ee
+
+
 Maximum Environment Size
 ========================
 http://stackoverflow.com/questions/1078031/what-is-the-maximum-size-of-an-environment-variable-value
