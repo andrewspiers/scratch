@@ -13,6 +13,11 @@ Ansible and Idrac
 https://www.stackhpc.com/ansible-drac.html
 
 
+Ansi escape codes
+=================
+Because I can never remember how to make text bold, or whatever.
+https://pypi.python.org/pypi/ansi/0.1.3
+
 
 Australian Access Federation Attribute Validator
 ================================================
