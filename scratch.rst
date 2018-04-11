@@ -395,6 +395,11 @@ Check out a remote branch to track it::
 
     git checkout --track origin/serverfix
 
+or if you want to call it something other than serverfix ( I often want a copy of someone else's
+'master' branch.), you can use::
+
+    git checkout -b new_branch_name origin/serverfix
+
 When you are done, Delete the branch 'oldbranch' from remote 'origin' ::
 
     git push origin --delete oldbranch
