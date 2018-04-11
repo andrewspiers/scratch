@@ -780,6 +780,23 @@ of these convenient methods
     Out[8]: 2017
 
 
+Python reimport or reload a module in an interactive session
+============================================================
+2018-04-11
+
+from my Stack Overflow answer_ ::
+
+    import importlib
+    importlib.reload(some_module)
+
+and in ipython::
+
+    %load_ext autoreload
+    %autoreload 2
+
+.. _answer: https://stackoverflow.com/a/14390676/37176
+
+
 Python Profiling
 ================
 2018-02-05
