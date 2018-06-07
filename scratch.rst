@@ -396,12 +396,14 @@ This is useful for splitting part of a project out into a separate project.
 
 1. Create a new repository with git init
 2. Add the source repository as a remote
-3. `git fetch`
-4. `git config core.sparseCheckout true`
-5. List trees to be checked out in `.git/info/sparse-checkout`::
+3. ``git fetch``
+4. ``git config core.sparseCheckout true``
+5. List trees to be checked out in ``.git/info/sparse-checkout``::
+
     echo "some/dir/" >> .git/info/sparse-checkout
     echo "another/sub/tree" >> .git/info/sparse-checkout
-6. `git pull <remote> <remote branch>`
+
+6. ``git pull <remote> <remote branch>``
 
 
 reference: stack overflow_
