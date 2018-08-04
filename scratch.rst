@@ -460,10 +460,6 @@ Haskell Resources
   http://haskellbook.com/
 * Monads for Functional Programming
   https://scholar.google.com.au/scholar?hl=en&as_sdt=0%2C5&q=Monads+for+Functional+Programming+In+Advanced+Functional+Programming&btnG=
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 IPv6 rules
 ==========
