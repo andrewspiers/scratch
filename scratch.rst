@@ -353,6 +353,7 @@ This is not a complaint about documentation, just a general gripe:
 
 * The debian packaged version of gearmand packaged in gearman-job-server
   logs to a file /var/log/gearmand.log, not to the foreground.
+
   ( side note: this is poor packaging design IMO. The binary should just behave
   as it is shipped, and there should be a *service* that wraps this, and when
   started, logs to a log file ( or maybe just the journal.) )
@@ -459,6 +460,10 @@ Haskell Resources
   http://haskellbook.com/
 * Monads for Functional Programming
   https://scholar.google.com.au/scholar?hl=en&as_sdt=0%2C5&q=Monads+for+Functional+Programming+In+Advanced+Functional+Programming&btnG=
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 IPv6 rules
 ==========
