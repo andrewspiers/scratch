@@ -13,6 +13,11 @@ Ansible and Idrac
 https://www.stackhpc.com/ansible-drac.html
 
 
+Ansi escape codes
+=================
+Because I can never remember how to make text bold, or whatever.
+https://pypi.python.org/pypi/ansi/0.1.3
+
 
 Australian Access Federation Attribute Validator
 ================================================
@@ -24,6 +29,13 @@ Brookings ISIS Study
 This is a study of ISIS supporters on Twitter. Mainly interesting for
 its methods. Randi Harper mentions this in her LCA16 talk mirror.linux.org.au
 http://brook.gs/1EpSQIX
+
+
+Benchmarking Disk I/O ( with fio )
+==================================
+Nice quick writeup and examples:
+https://web.archive.org/web/20170608050506/https://www.binarylane.com.au/support/solutions/articles/1000055889-how-to-benchmark-disk-i-o
+
 
 Btrfs
 =====
@@ -255,6 +267,16 @@ single corrected error) you should write any value into
 `/sys/devices/system/edac/mc/mc0/reset_counters`, substituting the correct
 memory controller number for `mc0`.
 
+Emlog circular files for linux:
+===============================
+http://www.circlemud.org/jelson/software/emlog/
+
+
+
+Emoji and Symbol fonts for Fedora
+=================================
+Install the package: gdouros-symbola-fonts
+
 Errno EAI_AGAIN
 ===============
 This is the descriptive error that npm returns when it can't get to the network
@@ -263,9 +285,6 @@ pbuilder environment and using the default setting which is to switch off
 networking. You can permit networking to work in this environment by setting
 `USENETWORK=yes` in `/etc/pbuilderrc`.
 
-Emoji and Symbol fonts for Fedora
-=================================
-Install the package: gdouros-symbola-fonts
 
 ESPlant
 =======
@@ -319,23 +338,24 @@ Gearman : Issues with Documentation
 These are some very rough notes, I could be wrong about all this stuff!!
 
 * The Debian packaged version (from Jessie) 1.0.6-5 doesn't support
-the -vvv switch specified at http://gearman.org/getting-started/
+  the -vvv switch specified at http://gearman.org/getting-started/
 
 My fork of the source of that is at:
     https://github.com/andrewspiers/gearman.github.io/blob/master/pages/getting_started.txt
 
 * Building from source: Needs libtool, autoconf, boost ( libboost-all-dev ),
-gperf, libevent-dev, uuid-dev
+  gperf, libevent-dev, uuid-dev
 
 * In many ways, .travis.yml is better documentation than the getting started
- file.
+  file.
 
 This is not a complaint about documentation, just a general gripe:
+
 * The debian packaged version of gearmand packaged in gearman-job-server
-logs to a file /var/log/gearmand.log, not to the foreground.
- ( side note: this is poor packaging design IMO. The binary should just behave
-as it is shipped, and there should be a *service* that wraps this, and when
-started, logs to a log file ( or maybe just the journal.) )
+  logs to a file /var/log/gearmand.log, not to the foreground.
+  ( side note: this is poor packaging design IMO. The binary should just behave
+  as it is shipped, and there should be a *service* that wraps this, and when
+  started, logs to a log file ( or maybe just the journal.) )
 
 
 Gerrit : Delete a review
@@ -368,14 +388,52 @@ also do::
     git fsck --lost-found 2>/dev/null | awk '{print $3}' | git show
 
 
+Git: clone subdirectory
+=======================
+2018-06-07
+
+This is useful for splitting part of a project out into a separate project.
+
+1. Create a new repository with git init
+2. Add the source repository as a remote
+3. ``git fetch``
+4. ``git config core.sparseCheckout true``
+5. List trees to be checked out in ``.git/info/sparse-checkout``::
+
+    echo "some/dir/" >> .git/info/sparse-checkout
+    echo "another/sub/tree" >> .git/info/sparse-checkout
+
+6. ``git pull <remote> <remote branch>``
+
+
+reference: stack overflow_
+
+
+.. _overflow: https://stackoverflow.com/a/13738951/37176
+
 Git: remote tracking branch
 ===========================
 
-::
+Check out a remote branch to track it::
 
     git checkout --track origin/serverfix
 
-from:
+or if you want to call it something other than serverfix ( I often want a copy of someone else's
+'master' branch.), you can use::
+
+    git checkout -b new_branch_name origin/serverfix
+
+When you are done, Delete the branch 'oldbranch' from remote 'origin' ::
+
+    git push origin --delete oldbranch
+
+If someone else has deleted remote branches (on the remote) and you
+want to remove your local copy of those references, run::
+
+    git fetch --prune
+
+
+ref:
     https://git-scm.com/book/id/v2/Git-Branching-Remote-Branches
 
 
@@ -392,21 +450,22 @@ Haskell Resources
 =================
 
 * Haskell fast and hard:
- http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/#
+  http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/#
 * Learn you a Haskell for great good:
- http://learnyouahaskell.com/chapters
+  http://learnyouahaskell.com/chapters
 * A gentle introduction to Haskell:
- https://www.haskell.org/tutorial/index.html
+  https://www.haskell.org/tutorial/index.html
 * The Haskell Book
- http://haskellbook.com/
+  http://haskellbook.com/
 * Monads for Functional Programming
- https://scholar.google.com.au/scholar?hl=en&as_sdt=0%2C5&q=Monads+for+Functional+Programming+In+Advanced+Functional+Programming&btnG=
+  https://scholar.google.com.au/scholar?hl=en&as_sdt=0%2C5&q=Monads+for+Functional+Programming+In+Advanced+Functional+Programming&btnG=
 
 IPv6 rules
 ==========
 I found a good basic set of firewall rules for IPv6 systems. If your system has
 any ipv6 addresses with *global scope* you should take a look at
-these rules_ from cert_.org.
+these rules_ from cert_.org. Note they only cover ICMP for IPv6, you will
+probably want more rules for other traffic.
 
 .. _rules: https://www.cert.org/downloads/IPv6/ip6tables_rules.txt
 .. _cert: https://www.cert.org
@@ -475,6 +534,31 @@ https://www.elastic.co/guide/en/kibana/3.0/queries.html
 
 One thing to watch out for  is that kibana uses quotes differently, so that
 'jenkins-jobs' matches differently to "jenkins-jobs".
+
+
+Kubectl Cheat Sheet
+===================
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+
+Kubernetes ( kubectl ) Client Side Debugging:
+=============================================
+Similarly to the openstack client, it is possible to make kubectl log its
+outgoing requests. It is not well documented. `kubectl --help` output includes
+the following line::
+
+    Use "kubectl options" for a list of global command-line options (applies to all commands).
+
+`kubectl options` includes this line::
+
+    -v, --v=0: log level for V logs
+
+This commit_ adds debugging levels 6,7,8 and 9 to the client. The files
+debugging.go, helper.go, and request.go have been moved, although the
+functionality seems to remain.
+
+.. _commit: https://github.com/kubernetes/kubernetes/pull/10032/commits/bab0a61ef1e68e2dc780656a9f12eb7d347175ee
+
 
 Maximum Environment Size
 ========================
@@ -550,6 +634,12 @@ Openstack Neutron Associate Fixed ip with instance / reserve ip
 
 http://web.archive.org/web/20160129000655/https://community.hpcloud.com/question/2723/how-associate-fixed-ip-instance
 
+
+Openstack Neutron Metadata
+==========================
+https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/
+
+
 Packer
 ======
 We use the binary versions from http://packer.io
@@ -567,9 +657,6 @@ set the environment variable PACKER_LOG (to any value) and watch the keypresses
 being typed in to the console. If the installer seems to get stuck, then you
 can use the vnc console to see why.
 
-Openstack Neutron Metadata
-==========================
-https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/
 
 PowerDNS
 ========
@@ -581,6 +668,7 @@ https://www.digitalocean.com/community/tutorials/how-to-configure-dns-replicatio
 Perl
 ====
 http://www.perl.org/books/beginning-perl/
+
 
 Puppet Unit Testing
 ===================
@@ -672,6 +760,29 @@ Python Functional Programming
 An introduction: http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
 
 
+Python Logging
+==============
+2018-03-15
+
+Three line logging::
+
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+    logging.debug('message')
+
+Only turn logging up to DEBUG for my script::
+
+    import logging
+    logging.basicConfig(level=logging.WARNING)
+    logging.getLogger(__name__).setLevel(logging.DEBUG)
+
+Set debug logging everywhere except for that noisy requests module::
+
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+    logging.getLogger("requests").setLevel(logging.WARNING)
+
+
 Python Numpy datetime64
 =======================
 Numpy uses a type called datetime64, which does not have the useful methods
@@ -690,6 +801,45 @@ of these convenient methods
 
     In [8]: p.year
     Out[8]: 2017
+
+
+Python reimport or reload a module in an interactive session
+============================================================
+2018-04-11
+
+from my Stack Overflow answer_ ::
+
+    import importlib
+    importlib.reload(some_module)
+
+and in ipython::
+
+    %load_ext autoreload
+    %autoreload 2
+
+.. _answer: https://stackoverflow.com/a/14390676/37176
+
+
+Python Profiling
+================
+2018-02-05
+
+The base of python profilng is cProfile_ . The python profiling module also
+includes pstats, which formats the profiling data. The pymotw_ page on these is
+worthwhile. You can use gprof2dot_ to create a 'dot' file which is a
+representation of a network graph. Alternatively you can use cprofilev_ to
+obtain a sortable html view of the cprofile output.
+
+A slightly different approach is taken by line_profiler_ which will give you
+line by line performance profiling of certain functions, where you have added a
+decorator.
+
+
+.. _cProfile: https://docs.python.org/3/library/profile.html
+.. _cprofilev: https://github.com/ymichael/cprofilev
+.. _pymotw: https://pymotw.com/3/profile/
+.. _line_profiler: https://github.com/rkern/line_profiler
+.. _gprof2dot: https://github.com/jrfonseca/gprof2dot
 
 
 Reboot on Hung Task
@@ -721,6 +871,7 @@ Here is a puppet class to make it happen::
 
 And finally, the documentation for all the linux kernel sysctls:
 https://www.kernel.org/doc/Documentation/sysctl/kernel.txt
+
 
 Removing Old Kernels on Ubuntu and Debian Systems
 =================================================
@@ -924,6 +1075,12 @@ Vim folding commands::
     [z move to start of open fold.
     ]z move to end of open fold.
 
+
+Vim left margin via folding abuse
+=================================
+You can use `set foldcolumn=12` to give yourself 12 characters of
+margin space. This doesn't indent your text and makes things nicer
+when you are using full screen.
 
 
 Visual Studio Code plugins
