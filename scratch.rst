@@ -412,6 +412,17 @@ reference: stack overflow_
 
 .. _overflow: https://stackoverflow.com/a/13738951/37176
 
+
+Git: initial empty commit
+=========================
+
+2018-08-07
+
+::
+
+    git commit --allow-empty -m 'Initial commit'
+
+
 Git: remote tracking branch
 ===========================
 
