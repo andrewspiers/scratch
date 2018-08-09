@@ -981,7 +981,18 @@ openstack api ::
 
     # curl http://169.254.169.254/openstack/latest/
 
+SSHFS For Windows
+=================
+This seems to be the latest hack_ to make it work::
 
+
+    ## How to use:
+
+    Once you have installed WinFsp and SSHFS-Win you can start an SSHFS session to a remote computer using the following syntax:
+
+        \\sshfs\[locuser=]user@host[!port][\path]
+
+.. _hack: https://github.com/billziss-gh/sshfs-win
 
 SOCKS5 Proxy over SSH
 =====================
