@@ -772,6 +772,12 @@ Puppet srv records
      dig _x-puppet._tcp.rc.example.com SRV
 
 
+Python Decorators
+=================
+This made a reasonable reference:
+https://realpython.com/primer-on-python-decorators/
+
+
 Python Functional Programming
 =============================
 An introduction: http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
