@@ -447,7 +447,7 @@ want to remove your local copy of those references, run::
 Or alternatively if you want to delete just your local reference to a remote branch
 that has already been deleted::
 
-    git branch --delete ---remotes origin/oldrbanch
+    git branch --delete ---remotes origin/oldbranch
 
 
 ref:
