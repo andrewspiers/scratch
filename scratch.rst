@@ -258,6 +258,21 @@ The reference https://docs.docker.com/engine/admin/logging/view_container_logs/
 Contains useful information about techniques for redirecting process output
 from file to stderr and stdout.
 
+
+Docker : Ubuntu Snap requires root
+==================================
+
+https://github.com/docker/docker-snap/issues/1#issuecomment-437654378 ::
+
+    sudo docker ps # which works fine
+    docker ps # which doesn't work because of permission failure
+    sudo addgroup --system docker
+    sudo adduser $USER docker
+    newgrp docker
+    sudo snap restart docker
+    docker ps # this now works because my user is in the group
+
+
 Edac : Error Detection And Correction
 =====================================
 https://www.kernel.org/doc/Documentation/edac.txt
