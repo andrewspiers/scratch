@@ -463,6 +463,12 @@ helpful `guide`__ .
 .. __:  http://web.archive.org/web/20160121075851/http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
 
 
+Haproxy simple SSL Termination
+==============================
+
+https://web.archive.org/web/20181129044934/https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04
+
+
 Haskell Resources
 =================
 
