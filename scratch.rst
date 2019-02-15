@@ -484,6 +484,11 @@ Haproxy simple SSL Termination
 https://web.archive.org/web/20181129044934/https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04
 
 
+Haproxy config reference
+========================
+
+https://cbonte.github.io/haproxy-dconv/1.6/configuration.html
+
 Haskell Resources
 =================
 
