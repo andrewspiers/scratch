@@ -832,6 +832,19 @@ Set debug logging everywhere except for that noisy requests module::
     logging.getLogger("requests").setLevel(logging.WARNING)
 
 
+
+Python Merge Dictionaries
+=========================
+2019-02-26
+
+::
+    context = {**defaults, **user}
+
+
+https://web.archive.org/web/20181015183358/http://treyhunner.com/2016/02/how-to-merge-dictionaries-in-python/
+
+
+
 Python Numpy datetime64
 =======================
 Numpy uses a type called datetime64, which does not have the useful methods
