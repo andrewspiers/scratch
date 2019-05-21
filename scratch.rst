@@ -484,6 +484,11 @@ Haproxy simple SSL Termination
 https://web.archive.org/web/20181129044934/https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04
 
 
+Haproxy config reference
+========================
+
+https://cbonte.github.io/haproxy-dconv/1.6/configuration.html
+
 Haskell Resources
 =================
 
@@ -825,6 +830,19 @@ Set debug logging everywhere except for that noisy requests module::
     import logging
     logging.basicConfig(level=logging.DEBUG)
     logging.getLogger("requests").setLevel(logging.WARNING)
+
+
+
+Python Merge Dictionaries
+=========================
+2019-02-26
+
+::
+    context = {**defaults, **user}
+
+
+https://web.archive.org/web/20181015183358/http://treyhunner.com/2016/02/how-to-merge-dictionaries-in-python/
+
 
 
 Python Numpy datetime64
