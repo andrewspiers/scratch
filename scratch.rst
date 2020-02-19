@@ -701,6 +701,17 @@ being typed in to the console. If the installer seems to get stuck, then you
 can use the vnc console to see why.
 
 
+Patching and Diffing
+====================
+
+To create a diff:
+1.  create a copy of the file called file.orig
+2.  edit the file
+3.  run diff file.orig file > file.patch
+To apply it::
+
+    patch file.1 < file.patch
+
 PowerDNS
 ========
 http://www.debiantutorials.com/installing-powerdns-as-supermaster-with-slaves/
