@@ -603,6 +603,14 @@ functionality seems to remain.
 .. _commit: https://github.com/kubernetes/kubernetes/pull/10032/commits/bab0a61ef1e68e2dc780656a9f12eb7d347175ee
 
 
+LXDE and the Numlock setting.
+=============================
+2020-08-25
+To have the numlock key on at boot, if you are using the *lxdm* display manager
+(which I think is the default now), under `/etc/lxdm/lxdm.conf` Simply change
+`numlock=0` to `numlock=1`. It is simple when you nkow how!
+
+
 Maximum Environment Size
 ========================
 http://stackoverflow.com/questions/1078031/what-is-the-maximum-size-of-an-environment-variable-value
