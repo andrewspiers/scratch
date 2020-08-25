@@ -606,9 +606,10 @@ functionality seems to remain.
 LXDE and the Numlock setting.
 =============================
 2020-08-25
-To have the numlock key on at boot, if you are using the *lxdm* display manager
-(which I think is the default now), under `/etc/lxdm/lxdm.conf` Simply change
-`numlock=0` to `numlock=1`. It is simple when you nkow how!
+
+To have the number lock key on at boot, if you are using the *lxdm* display
+manager (which I think is the default now), under ``/etc/lxdm/lxdm.conf`` Simply
+change ``numlock=0`` to ``numlock=1``. It is simple when you know how!
 
 
 Maximum Environment Size
